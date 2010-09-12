@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>welcome.png</file>
+        <file>xitongshezhi.png</file>
+        <file>ruanjianbangzhu.png</file>
+        <file>tianjiafangyuan.png</file>
+        <file>tianjiakehu.png</file>
+        <file>tuichuxitong.png</file>
+        <file>qianyuechengjiao.png</file>
+        <file>qiehuandenglu.png</file>
+        <file>genjinchaxun.png</file>
+    </qresource>
+</RCC>
