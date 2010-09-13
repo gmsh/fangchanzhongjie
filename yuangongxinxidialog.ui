@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>yuangongXinxiDialog</class>
+ <widget class="QDialog" name="yuangongXinxiDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>332</width>
+    <height>404</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="main.qrc">
+    <normaloff>:/images/qiehuandenglu.png</normaloff>:/images/qiehuandenglu.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="1" column="0">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>员工编号</string>
+        </property>
+        <property name="buddy">
+         <cstring>yuangongBianhaoLineEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="yuangongBianhaoLineEdit"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>性别</string>
+        </property>
+        <property name="buddy">
+         <cstring>xingbieComboBox</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QComboBox" name="xingbieComboBox">
+        <item>
+         <property name="text">
+          <string>男</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>女</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>员工姓名</string>
+        </property>
+        <property name="buddy">
+         <cstring>yuanggongXingmingLineEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="yuanggongXingmingLineEdit"/>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>学历</string>
+        </property>
+        <property name="buddy">
+         <cstring>xueliComboBox</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QComboBox" name="xueliComboBox">
+        <item>
+         <property name="text">
+          <string>博士</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>硕士</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>本科</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>专科</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>高中</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>初中</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>小学</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>身份证号</string>
+        </property>
+        <property name="buddy">
+         <cstring>shenfenzhenghaoLineEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="shenfenzhenghaoLineEdit"/>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>婚姻状况</string>
+        </property>
+        <property name="buddy">
+         <cstring>hunyinZhuangkuangComboBox</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QComboBox" name="hunyinZhuangkuangComboBox">
+        <item>
+         <property name="text">
+          <string>单身</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>已婚</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>联系电话</string>
+        </property>
+        <property name="buddy">
+         <cstring>lianxiDianhuaLineEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="lianxiDianhuaLineEdit"/>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>出生日期</string>
+        </property>
+        <property name="buddy">
+         <cstring>chushengRiqiRateEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QDateEdit" name="chushengRiqiRateEdit"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>籍贯</string>
+        </property>
+        <property name="buddy">
+         <cstring>jiguanLineEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="jiguanLineEdit"/>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>就职日期</string>
+        </property>
+        <property name="buddy">
+         <cstring>jiuzhiRiqiDateEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QDateEdit" name="jiuzhiRiqiDateEdit"/>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="label_11">
+        <property name="text">
+         <string>住址</string>
+        </property>
+        <property name="buddy">
+         <cstring>zhuzhiLineEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1" colspan="3">
+       <widget class="QLineEdit" name="zhuzhiLineEdit"/>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="label_12">
+        <property name="text">
+         <string>备注</string>
+        </property>
+        <property name="buddy">
+         <cstring>beizhuPlainTextEdit</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1" rowspan="2" colspan="3">
+       <widget class="QPlainTextEdit" name="beizhuPlainTextEdit"/>
+      </item>
+      <item row="7" column="0">
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="main.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>yuangongXinxiDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>yuangongXinxiDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

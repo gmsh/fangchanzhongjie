@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>yuangongGuanliDialog</class>
+ <widget class="QDialog" name="yuangongGuanliDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>417</width>
+    <height>291</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="gmsh-fangchanzhongjie/main.qrc">
+    <normaloff>:/images/qiehuandenglu.png</normaloff>:/images/qiehuandenglu.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QPushButton" name="addPushButton">
+              <property name="text">
+               <string>添加员工</string>
+              </property>
+              <property name="icon">
+               <iconset resource="gmsh-fangchanzhongjie/main.qrc">
+                <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="modifyPushButton">
+              <property name="text">
+               <string>修改员工</string>
+              </property>
+              <property name="icon">
+               <iconset resource="gmsh-fangchanzhongjie/main.qrc">
+                <normaloff>:/images/modify.png</normaloff>:/images/modify.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="deletePushButton">
+              <property name="text">
+               <string>删除员工</string>
+              </property>
+              <property name="icon">
+               <iconset resource="gmsh-fangchanzhongjie/main.qrc">
+                <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <widget class="QTableView" name="tableView"/>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="gmsh-fangchanzhongjie/main.qrc"/>
+ </resources>
+ <connections/>
+</ui>

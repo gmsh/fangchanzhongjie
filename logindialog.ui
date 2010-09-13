@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>登录</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="main.qrc">
+    <normaloff>:/images/tianjiafangyuan.png</normaloff>:/images/tianjiafangyuan.png</iconset>
+  </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
     <widget class="QLabel" name="label">

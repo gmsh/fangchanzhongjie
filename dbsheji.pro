@@ -23,5 +23,9 @@ FORMS += logindialog.ui \
     mainwindow.ui \
     fangyuandialog.ui \
     keyuandialog.ui \
-    canshuguanlidialog.ui
+    canshuguanlidialog.ui \
+    quanxianzushezhidialog.ui \
+    quanxianzuguanlidialog.ui \
+    yuangongguanlidialog.ui \
+    yuangongxinxidialog.ui
 HEADERS += logindialog.h

@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>参数设置</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="main.qrc">
+    <normaloff>:/images/xitongshezhi.png</normaloff>:/images/xitongshezhi.png</iconset>
+  </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
     <widget class="QTreeWidget" name="canshuFenleiTreeWidget">
