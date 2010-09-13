@@ -11,9 +11,17 @@ OTHER_FILES += welcome.png \
     tianjiakehu.png \
     tianjiafangyuan.png \
     ruanjianbangzhu.png \
-    renwuguanli.png
+    renwuguanli.png \
+    cash.png \
+    quanxian.png \
+    modify.png \
+    laiyuan.png \
+    fencheng.png \
+    delete.png \
+    add.png
 FORMS += logindialog.ui \
     mainwindow.ui \
     fangyuandialog.ui \
-    keyuandialog.ui
+    keyuandialog.ui \
+    canshuguanlidialog.ui
 HEADERS += logindialog.h

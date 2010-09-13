@@ -10,5 +10,12 @@
         <file>qiehuandenglu.png</file>
         <file>genjinchaxun.png</file>
         <file>renwuguanli.png</file>
+        <file>cash.png</file>
+        <file>add.png</file>
+        <file>delete.png</file>
+        <file>fencheng.png</file>
+        <file>laiyuan.png</file>
+        <file>modify.png</file>
+        <file>quanxian.png</file>
     </qresource>
 </RCC>
