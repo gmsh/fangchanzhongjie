@@ -1,5 +1,6 @@
 SOURCES += main.cpp \
-    logindialog.cpp
+    logindialog.cpp \
+    dbconnect.cpp
 QT += sql
 RESOURCES += main.qrc
 OTHER_FILES += welcome.png \
@@ -28,4 +29,5 @@ FORMS += logindialog.ui \
     quanxianzuguanlidialog.ui \
     yuangongguanlidialog.ui \
     yuangongxinxidialog.ui
-HEADERS += logindialog.h
+HEADERS += logindialog.h \
+    dbconnect.h
