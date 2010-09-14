@@ -6,17 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>270</width>
+    <width>266</width>
     <height>259</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <layout class="QFormLayout" name="formLayout">
-   <property name="fieldGrowthPolicy">
-    <enum>QFormLayout::ExpandingFieldsGrow</enum>
-   </property>
+  <property name="windowIcon">
+   <iconset resource="main.qrc">
+    <normaloff>:/images/quanxian.png</normaloff>:/images/quanxian.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
@@ -37,152 +38,7 @@
       </layout>
      </item>
      <item>
-      <widget class="QTreeWidget" name="treeWidget">
-       <column>
-        <property name="text">
-         <string>权限分配</string>
-        </property>
-        <property name="icon">
-         <iconset resource="main.qrc">
-          <normaloff>:/images/quanxian.png</normaloff>:/images/quanxian.png</iconset>
-        </property>
-       </column>
-       <item>
-        <property name="text">
-         <string>房源管理</string>
-        </property>
-        <property name="icon">
-         <iconset resource="main.qrc">
-          <normaloff>:/images/tianjiafangyuan.png</normaloff>:/images/tianjiafangyuan.png</iconset>
-        </property>
-        <item>
-         <property name="text">
-          <string>出售房源</string>
-         </property>
-         <property name="icon">
-          <iconset resource="main.qrc">
-           <normaloff>:/images/tianjiafangyuan.png</normaloff>:/images/tianjiafangyuan.png</iconset>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>出租房源</string>
-         </property>
-         <property name="icon">
-          <iconset resource="main.qrc">
-           <normaloff>:/images/tianjiafangyuan.png</normaloff>:/images/tianjiafangyuan.png</iconset>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>合租房源</string>
-         </property>
-         <property name="icon">
-          <iconset resource="main.qrc">
-           <normaloff>:/images/tianjiafangyuan.png</normaloff>:/images/tianjiafangyuan.png</iconset>
-         </property>
-        </item>
-       </item>
-       <item>
-        <property name="text">
-         <string>客源管理</string>
-        </property>
-        <property name="icon">
-         <iconset resource="main.qrc">
-          <normaloff>:/images/tianjiakehu.png</normaloff>:/images/tianjiakehu.png</iconset>
-        </property>
-        <item>
-         <property name="text">
-          <string>求购客户</string>
-         </property>
-         <property name="icon">
-          <iconset resource="main.qrc">
-           <normaloff>:/images/tianjiakehu.png</normaloff>:/images/tianjiakehu.png</iconset>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>求租客户</string>
-         </property>
-         <property name="icon">
-          <iconset resource="main.qrc">
-           <normaloff>:/images/tianjiakehu.png</normaloff>:/images/tianjiakehu.png</iconset>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>合租客户</string>
-         </property>
-         <property name="icon">
-          <iconset resource="main.qrc">
-           <normaloff>:/images/tianjiakehu.png</normaloff>:/images/tianjiakehu.png</iconset>
-         </property>
-        </item>
-       </item>
-       <item>
-        <property name="text">
-         <string>跟进管理</string>
-        </property>
-        <property name="icon">
-         <iconset resource="main.qrc">
-          <normaloff>:/images/genjinchaxun.png</normaloff>:/images/genjinchaxun.png</iconset>
-        </property>
-        <item>
-         <property name="text">
-          <string>房源跟进</string>
-         </property>
-         <property name="icon">
-          <iconset resource="main.qrc">
-           <normaloff>:/images/tianjiafangyuan.png</normaloff>:/images/tianjiafangyuan.png</iconset>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>客源跟进</string>
-         </property>
-         <property name="icon">
-          <iconset resource="main.qrc">
-           <normaloff>:/images/tianjiakehu.png</normaloff>:/images/tianjiakehu.png</iconset>
-         </property>
-        </item>
-       </item>
-       <item>
-        <property name="text">
-         <string>签约管理</string>
-        </property>
-        <property name="icon">
-         <iconset resource="main.qrc">
-          <normaloff>:/images/qianyuechengjiao.png</normaloff>:/images/qianyuechengjiao.png</iconset>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>系统设置</string>
-        </property>
-        <property name="icon">
-         <iconset resource="main.qrc">
-          <normaloff>:/images/xitongshezhi.png</normaloff>:/images/xitongshezhi.png</iconset>
-        </property>
-        <item>
-         <property name="text">
-          <string>员工管理</string>
-         </property>
-         <property name="icon">
-          <iconset resource="main.qrc">
-           <normaloff>:/images/qiehuandenglu.png</normaloff>:/images/qiehuandenglu.png</iconset>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>权限组管理</string>
-         </property>
-         <property name="icon">
-          <iconset resource="main.qrc">
-           <normaloff>:/images/quanxian.png</normaloff>:/images/quanxian.png</iconset>
-         </property>
-        </item>
-       </item>
-      </widget>
+      <widget class="QTreeView" name="treeView"/>
      </item>
      <item>
       <widget class="QDialogButtonBox" name="buttonBox">

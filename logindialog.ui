@@ -69,8 +69,13 @@
       </item>
       <item row="2" column="0" colspan="2">
        <widget class="QLabel" name="label_4">
+        <property name="font">
+         <font>
+          <italic>true</italic>
+         </font>
+        </property>
         <property name="text">
-         <string>admin 默认密码为 888, 登陆后请修改</string>
+         <string>欢迎使用</string>
         </property>
        </widget>
       </item>

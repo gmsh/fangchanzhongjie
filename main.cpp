@@ -6,19 +6,20 @@
 #include "dbconnect.h"
 #include "yuangongguanlidialog.h"
 #include "canshuguanlidialog.h"
+#include "quanxianzushezhidialog.h"
 
 int main(int argc, char * argv[])
 {
     QApplication app(argc, argv);
     QTextCodec::setCodecForTr(QTextCodec::codecForLocale());
     DBConnect dbcon;
-    LoginDialog * loginDialog = new LoginDialog(0, dbcon.loginNames());
+    /*LoginDialog * loginDialog = new LoginDialog(0, dbcon.loginNames());
     QObject::connect(loginDialog, SIGNAL(loggined(QString,QString)), &dbcon, SLOT(login(QString,QString)));
     QObject::connect(&dbcon, SIGNAL(loginSuccessed()), loginDialog, SLOT(loginSuccessed()));
     QObject::connect(&dbcon, SIGNAL(loginFailed()), loginDialog, SLOT(loginFailed()));
     if(loginDialog->exec() == LoginDialog::Accepted){
         //
-    }
+    }*/
     /*YuangongGuanliDialog yuangongGuanliDialog(0);
     yuangongGuanliDialog.setTableModel(dbcon.yuangongModel);
     yuangongGuanliDialog.show();*/
@@ -26,6 +27,8 @@ int main(int argc, char * argv[])
     /*CanshuGuanliDialog canshuGuanliDialog(0, &dbcon);
     canshuGuanliDialog.show();*/
 
+    QuanxianzuShezhiDialog quanxianzuShezhiDialog;
+    quanxianzuShezhiDialog.show();
 
     return app.exec();
 }
