@@ -1,8 +1,10 @@
 #include "dbconnect.h"
 #include <QtCore/QString>
+#include <QtCore/QStringList>
 #include <QtCore/QDebug>
 #include <QtSql/QSqlTableModel>
 #include <QtSql/QSqlDatabase>
+#include <QtSql/QSqlQuery>
 DBConnect::DBConnect()
     : QObject()
 {
@@ -64,8 +66,10 @@ DBConnect::~DBConnect()
 
 void DBConnect::login(const QString &loginName, const QString &passwd)
 {
-    qDebug() << loginName << "," << passwd;
-    if(passwd == "888")//test only
+    QSqlQuery query;
+    query.exec("select mima from yuangong where yuangongxingming = '" + loginName + "'");
+    query.next();
+    if(passwd == query.value(0).toString())
         emit loginSuccessed();
     else
         emit loginFailed();
@@ -81,4 +85,16 @@ bool DBConnect::connectDB()
     db->setUserName("root");
     db->setPassword("h6n4t2i5shz$");
     return db->open();
+}
+
+QStringList * DBConnect::loginNames()
+{
+    QStringList * list = new QStringList;
+    QSqlQuery query;
+    query.exec("select yuangongxingming from yuangong");
+    while(query.next())
+    {
+        *list << query.value(0).toString();
+    }
+    return list;
 }

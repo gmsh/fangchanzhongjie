@@ -1,8 +1,8 @@
 #ifndef DBCONNECT_H
 #define DBCONNECT_H
 #include <QtCore/QObject>
-#include <QtCore/QString>
 class QString;
+class QStringList;
 class QSqlTableModel;
 class QSqlDatabase;
 class DBConnect : public QObject
@@ -12,6 +12,8 @@ public:
     DBConnect();
     ~DBConnect();
     bool connectDB();
+    QStringList * loginNames();
+
     QSqlTableModel * yuangongModel;
 
     QSqlTableModel * canshu_fangkelaiyuan;

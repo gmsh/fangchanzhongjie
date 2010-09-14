@@ -8,8 +8,7 @@ class LoginDialog : public QDialog, public Ui::LoginDialog
 {
     Q_OBJECT
 public:
-    LoginDialog(QWidget *parent = 0);
-    void setLoginNames(const QStringList & list);
+    LoginDialog(QWidget *parent = 0, QStringList * list = 0);
 signals:
     void loggined(const QString & loginName, const QString & passwd);
 private slots:
@@ -18,6 +17,8 @@ public slots:
     void accept();
     void loginFailed();
     void loginSuccessed();
+private:
+    QStringList * nameList;
 };
 
 #endif // LOGINDIALOG_H
