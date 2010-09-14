@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>canshuShezhiDialog</class>
- <widget class="QDialog" name="canshuShezhiDialog">
+ <class>canshuGuanliiDialog</class>
+ <widget class="QDialog" name="canshuGuanliiDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>570</width>
-    <height>297</height>
+    <width>576</width>
+    <height>329</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,144 +17,209 @@
    <iconset resource="main.qrc">
     <normaloff>:/images/xitongshezhi.png</normaloff>:/images/xitongshezhi.png</iconset>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout">
-   <item>
-    <widget class="QTreeWidget" name="canshuFenleiTreeWidget">
-     <column>
-      <property name="text">
-       <string>参数分类</string>
-      </property>
-     </column>
-     <item>
-      <property name="text">
-       <string>房屋/客户来源</string>
-      </property>
-      <property name="icon">
-       <iconset resource="main.qrc">
-        <normaloff>:/images/laiyuan.png</normaloff>:/images/laiyuan.png</iconset>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>房源状态</string>
-      </property>
-      <property name="icon">
-       <iconset resource="main.qrc">
-        <normaloff>:/images/tianjiafangyuan.png</normaloff>:/images/tianjiafangyuan.png</iconset>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>客户状态</string>
-      </property>
-      <property name="icon">
-       <iconset resource="main.qrc">
-        <normaloff>:/images/tianjiakehu.png</normaloff>:/images/tianjiakehu.png</iconset>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>跟进方式</string>
-      </property>
-      <property name="icon">
-       <iconset resource="main.qrc">
-        <normaloff>:/images/genjinchaxun.png</normaloff>:/images/genjinchaxun.png</iconset>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>付款方式</string>
-      </property>
-      <property name="icon">
-       <iconset resource="main.qrc">
-        <normaloff>:/images/cash.png</normaloff>:/images/cash.png</iconset>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>分成说明</string>
-      </property>
-      <property name="icon">
-       <iconset resource="main.qrc">
-        <normaloff>:/images/fencheng.png</normaloff>:/images/fencheng.png</iconset>
-      </property>
-     </item>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="groupBox_2">
-     <property name="title">
-      <string>参数设置</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QFrame" name="frame">
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
+  <layout class="QGridLayout" name="gridLayout_6">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout_5">
+     <item row="0" column="0">
+      <widget class="QTreeWidget" name="canshuFenleiTreeWidget">
+       <column>
+        <property name="text">
+         <string>参数分类</string>
         </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
+       </column>
+       <item>
+        <property name="text">
+         <string>房屋/客户来源</string>
         </property>
-        <layout class="QGridLayout" name="gridLayout">
-         <item row="0" column="0">
-          <widget class="QPushButton" name="addPushButton">
-           <property name="text">
-            <string>添加</string>
-           </property>
-           <property name="icon">
-            <iconset resource="main.qrc">
-             <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>32</width>
-             <height>32</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QPushButton" name="deletePushButton">
-           <property name="text">
-            <string>删除</string>
-           </property>
-           <property name="icon">
-            <iconset resource="main.qrc">
-             <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>32</width>
-             <height>32</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QPushButton" name="modifyPushButton">
-           <property name="text">
-            <string>修改</string>
-           </property>
-           <property name="icon">
-            <iconset resource="main.qrc">
-             <normaloff>:/images/modify.png</normaloff>:/images/modify.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>32</width>
-             <height>32</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
-       <widget class="QTableView" name="canshuTableView"/>
-      </item>
-     </layout>
-    </widget>
+        <property name="icon">
+         <iconset resource="main.qrc">
+          <normaloff>:/images/laiyuan.png</normaloff>:/images/laiyuan.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>房源状态</string>
+        </property>
+        <property name="icon">
+         <iconset resource="main.qrc">
+          <normaloff>:/images/tianjiafangyuan.png</normaloff>:/images/tianjiafangyuan.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>客户状态</string>
+        </property>
+        <property name="icon">
+         <iconset resource="main.qrc">
+          <normaloff>:/images/tianjiakehu.png</normaloff>:/images/tianjiakehu.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>跟进方式</string>
+        </property>
+        <property name="icon">
+         <iconset resource="main.qrc">
+          <normaloff>:/images/genjinchaxun.png</normaloff>:/images/genjinchaxun.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>付款方式</string>
+        </property>
+        <property name="icon">
+         <iconset resource="main.qrc">
+          <normaloff>:/images/cash.png</normaloff>:/images/cash.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>分成说明</string>
+        </property>
+        <property name="icon">
+         <iconset resource="main.qrc">
+          <normaloff>:/images/fencheng.png</normaloff>:/images/fencheng.png</iconset>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="title">
+        <string>参数设置</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QFrame" name="frame">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="0" column="0">
+              <layout class="QGridLayout" name="gridLayout_3">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="addPushButton">
+                 <property name="text">
+                  <string>添加</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>32</width>
+                   <height>32</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="deletePushButton">
+                 <property name="text">
+                  <string>删除</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>32</width>
+                   <height>32</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QPushButton" name="modifyPushButton">
+                 <property name="text">
+                  <string>修改</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/modify.png</normaloff>:/images/modify.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>32</width>
+                   <height>32</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>参数分类</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="page">
+             <layout class="QGridLayout" name="gridLayout_2">
+              <item row="1" column="0">
+               <widget class="QTableView" name="fangkeLaiyuanTableView"/>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_2">
+             <layout class="QFormLayout" name="formLayout_2">
+              <item row="0" column="0">
+               <widget class="QTableView" name="fangyuanZhuangTaiTableView"/>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_3">
+             <layout class="QFormLayout" name="formLayout_3">
+              <item row="0" column="0">
+               <widget class="QTableView" name="kehuZhuangtaiTableView"/>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_4">
+             <layout class="QFormLayout" name="formLayout_4">
+              <item row="0" column="0">
+               <widget class="QTableView" name="genjinFangshiTableView"/>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_5">
+             <layout class="QFormLayout" name="formLayout_5">
+              <item row="0" column="0">
+               <widget class="QTableView" name="fukuanFangshiTableView"/>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_6">
+             <layout class="QFormLayout" name="formLayout_6">
+              <item row="0" column="0">
+               <widget class="QTableView" name="fenchengShuomingTableView"/>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>

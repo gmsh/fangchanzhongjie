@@ -11,10 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>员工管理</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="gmsh-fangchanzhongjie/main.qrc">
+   <iconset>
     <normaloff>:/images/qiehuandenglu.png</normaloff>:/images/qiehuandenglu.png</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout_3">
@@ -33,7 +33,7 @@
                <string>添加员工</string>
               </property>
               <property name="icon">
-               <iconset resource="gmsh-fangchanzhongjie/main.qrc">
+               <iconset>
                 <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
               </property>
               <property name="iconSize">
@@ -50,7 +50,7 @@
                <string>修改员工</string>
               </property>
               <property name="icon">
-               <iconset resource="gmsh-fangchanzhongjie/main.qrc">
+               <iconset>
                 <normaloff>:/images/modify.png</normaloff>:/images/modify.png</iconset>
               </property>
               <property name="iconSize">
@@ -67,7 +67,7 @@
                <string>删除员工</string>
               </property>
               <property name="icon">
-               <iconset resource="gmsh-fangchanzhongjie/main.qrc">
+               <iconset>
                 <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
               </property>
               <property name="iconSize">
@@ -105,8 +105,6 @@
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="gmsh-fangchanzhongjie/main.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

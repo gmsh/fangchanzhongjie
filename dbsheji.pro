@@ -1,6 +1,8 @@
 SOURCES += main.cpp \
     logindialog.cpp \
-    dbconnect.cpp
+    dbconnect.cpp \
+    yuangongguanlidialog.cpp \
+    canshuguanlidialog.cpp
 QT += sql
 RESOURCES += main.qrc
 OTHER_FILES += welcome.png \
@@ -19,7 +21,8 @@ OTHER_FILES += welcome.png \
     laiyuan.png \
     fencheng.png \
     delete.png \
-    add.png
+    add.png \
+    preparedb.sql
 FORMS += logindialog.ui \
     mainwindow.ui \
     fangyuandialog.ui \
@@ -30,4 +33,6 @@ FORMS += logindialog.ui \
     yuangongguanlidialog.ui \
     yuangongxinxidialog.ui
 HEADERS += logindialog.h \
-    dbconnect.h
+    dbconnect.h \
+    yuangongguanlidialog.h \
+    canshuguanlidialog.h

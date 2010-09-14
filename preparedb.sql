@@ -1,0 +1,34 @@
+create database fangchan;
+use fangchan;
+# yuangong version1, for test only, needs modify
+create table yuangong (yuangongbianhao int, xingbie varchar(2), yuangongxingming varchar(4), xueli varchar(2), shenfenzhenghao varchar(18), hunyinzhuangkuang varchar(2), lianxidianhua varchar(13), chushengriqi date, jiguan varchar(6), jiuzhiriqi date, suozaiquanxianzu varchar(6), mima varchar(20), zhuzhi varchar(10), beizhu varchar(20));
+insert into yuangong values(1, '男', '测试姓名', '博士', '123456789012345678', '单身', '1234567890123', '2000-1-1', '火星', '2001-8-30', '超级用户', 'passwd', '火星研究所', 'book of mozilla');
+
+create table canshu_fangkelaiyuan (bianhao int, mingcheng varchar(4));
+insert into canshu_fangkelaiyuan values (1, '来访');
+insert into canshu_fangkelaiyuan values (2, '来电');
+insert into canshu_fangkelaiyuan values (3, '介绍');
+insert into canshu_fangkelaiyuan values (4, '网络');
+create table canshu_fangyuanzhuangtai (bianhao int, mingcheng varchar(4));
+insert into canshu_fangyuanzhuangtai values (1, '正常状态');
+insert into canshu_fangyuanzhuangtai values (2, '已经成交');
+insert into canshu_fangyuanzhuangtai values (3, '保留状态');
+insert into canshu_fangyuanzhuangtai values (4, '已经失效');
+create table canshu_kehuzhuangtai(bianhao int, mingcheng varchar(4));
+insert into canshu_kehuzhuangtai values (1, '有效客户');
+insert into canshu_kehuzhuangtai values (2, '潜在客户');
+insert into canshu_kehuzhuangtai values (3, '已签约');
+insert into canshu_kehuzhuangtai values (4, '已失效');
+create table canshu_genjinfangshi(bianhao int, mingcheng varchar(4));
+insert into canshu_genjinfangshi values (1, '电话');
+insert into canshu_genjinfangshi values (2, '短信');
+insert into canshu_genjinfangshi values (3, '拜访');
+insert into canshu_genjinfangshi values (4, '来访');
+create table canshu_fukuanfangshi(bianhao int, mingcheng varchar(4));
+insert into canshu_fukuanfangshi values (1, '现金');
+insert into canshu_fukuanfangshi values (2, '支票');
+insert into canshu_fukuanfangshi values (3, '转帐');
+create table canshu_fenchengshuoming(binahao int, mingcheng varchar(4));
+insert into canshu_fenchengshuoming values (1, '开发分成');
+insert into canshu_fenchengshuoming values (2, '跟进分成');
+insert into canshu_fenchengshuoming values (3, '签约分成');
