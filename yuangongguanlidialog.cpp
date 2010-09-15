@@ -2,10 +2,13 @@
 #include "yuangongguanlidialog.h"
 #include "datedelegate.h"
 #include "combodelegate.h"
-YuangongGuanliDialog::YuangongGuanliDialog(QWidget *parent)
+#include "dbconnect.h"
+YuangongGuanliDialog::YuangongGuanliDialog(QWidget *parent, DBConnect *dbcon)
     :QDialog(parent)
 {
     setupUi(this);
+    this->dbcon = dbcon;
+    this->setTableModel(this->dbcon->yuangongModel);
 }
 YuangongGuanliDialog::~YuangongGuanliDialog()
 {
@@ -32,10 +35,14 @@ void YuangongGuanliDialog::setTableModel(QSqlTableModel *tableModel)
     this->hunyinZhuangkuangDelegate = new  ComboDelegate(this, hunyinZhuangkuangList);
     this->tableView->setItemDelegateForColumn(5, this->hunyinZhuangkuangDelegate);
 
+    this->suozaiQuanxianzuDelegate = new ComboDelegate(this, this->dbcon->quanxianzuList());
+    this->tableView->setItemDelegateForColumn(10, this->suozaiQuanxianzuDelegate);
+
     this->dateDelegate = new DateDelegate;
     this->tableView->setItemDelegateForColumn(7, this->dateDelegate);
     this->tableView->setItemDelegateForColumn(9,this->dateDelegate);
     this->tableView->selectRow(0);
+
 }
 void YuangongGuanliDialog::on_addPushButton_clicked()
 {

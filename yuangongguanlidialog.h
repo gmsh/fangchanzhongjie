@@ -7,11 +7,12 @@
 
 class DateDelegate;
 class ComboDelegate;
+class DBConnect;
 class YuangongGuanliDialog : public QDialog , public Ui::yuangongGuanliDialog
 {
     Q_OBJECT
 public:
-    YuangongGuanliDialog(QWidget * parent);
+    YuangongGuanliDialog(QWidget * parent = 0, DBConnect * dbcon = 0);
     ~YuangongGuanliDialog();
     void setTableModel(QSqlTableModel * tableModel);
 protected:
@@ -26,6 +27,8 @@ private:
     ComboDelegate * xingbieDelegate;
     ComboDelegate * xueliDelegate;
     ComboDelegate * hunyinZhuangkuangDelegate;
+    ComboDelegate * suozaiQuanxianzuDelegate;
+    DBConnect * dbcon;
 };
 
 #endif // YUANGONGGUANLIDIALOG_H
