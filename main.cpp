@@ -21,9 +21,9 @@ int main(int argc, char * argv[])
     if(loginDialog->exec() == LoginDialog::Accepted){
         //
     }*/
-    /*YuangongGuanliDialog yuangongGuanliDialog(0);
+    YuangongGuanliDialog yuangongGuanliDialog(0);
     yuangongGuanliDialog.setTableModel(dbcon.yuangongModel);
-    yuangongGuanliDialog.show();*/
+    yuangongGuanliDialog.show();
 
     /*CanshuGuanliDialog canshuGuanliDialog(0, &dbcon);
     canshuGuanliDialog.show();*/
@@ -31,8 +31,8 @@ int main(int argc, char * argv[])
     /*QuanxianzuShezhiDialog quanxianzuShezhiDialog;
     quanxianzuShezhiDialog.show();*/
 
-    QuanxianzuGuanliDialog quanxianzuGuanliDialog(0,&dbcon);
-    quanxianzuGuanliDialog.show();
+    /*QuanxianzuGuanliDialog quanxianzuGuanliDialog(0,&dbcon);
+    quanxianzuGuanliDialog.show();*/
 
     return app.exec();
 }

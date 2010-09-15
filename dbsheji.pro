@@ -4,7 +4,9 @@ SOURCES += main.cpp \
     yuangongguanlidialog.cpp \
     canshuguanlidialog.cpp \
     quanxianzushezhidialog.cpp \
-    quanxianzuguanlidialog.cpp
+    quanxianzuguanlidialog.cpp \
+    datedelegate.cpp \
+    combodelegate.cpp
 QT += sql
 RESOURCES += main.qrc
 OTHER_FILES += welcome.png \
@@ -39,4 +41,6 @@ HEADERS += logindialog.h \
     yuangongguanlidialog.h \
     canshuguanlidialog.h \
     quanxianzushezhidialog.h \
-    quanxianzuguanlidialog.h
+    quanxianzuguanlidialog.h \
+    datedelegate.h \
+    combodelegate.h
