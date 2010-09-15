@@ -184,3 +184,47 @@ void DBConnect::getQuanxian(QString *mingcheng, bool *a, bool *b, bool *c, bool 
     *k = query.value(11).toBool();
     *l = query.value(12).toBool();
 }
+
+QStringList * DBConnect::chengquList()
+{
+    QStringList * list = new QStringList;
+    QSqlQuery query;
+    query.exec("select mingcheng from canshu_chengqu");
+    while(query.next()){
+        *list << query.value(0).toString();
+    }
+    return list;
+}
+
+QStringList * DBConnect::fangwuZhuangtaiList()
+{
+    QStringList * list = new QStringList;
+    QSqlQuery query;
+    query.exec("select mingcheng from canshu_fangyuanzhuangtai");
+    while(query.next()){
+        *list << query.value(0).toString();
+    }
+    return list;
+}
+
+QStringList * DBConnect::kekuZhuangtaiList()
+{
+    QStringList * list = new QStringList;
+    QSqlQuery query;
+    query.exec("select mingcheng from canshu_kehuzhuangtai");
+    while(query.next()){
+        *list << query.value(0).toString();
+    }
+    return list;
+}
+
+QStringList * DBConnect::fangkeLaiyuanList()
+{
+    QStringList * list = new QStringList;
+    QSqlQuery query;
+    query.exec("select mingcheng from canshu_fangkelaiyuan");
+    while(query.next()){
+        *list << query.value(0).toString();
+    }
+    return list;
+}

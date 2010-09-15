@@ -11,10 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>房源信息</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="main.qrc">
+   <iconset>
     <normaloff>:/images/tianjiafangyuan.png</normaloff>:/images/tianjiafangyuan.png</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout_5">
@@ -54,7 +54,7 @@
           <string>出售</string>
          </property>
          <property name="icon">
-          <iconset resource="main.qrc">
+          <iconset>
            <normaloff>:/images/tianjiafangyuan.png</normaloff>:/images/tianjiafangyuan.png</iconset>
          </property>
         </item>
@@ -63,7 +63,7 @@
           <string>出租</string>
          </property>
          <property name="icon">
-          <iconset resource="main.qrc">
+          <iconset>
            <normaloff>:/images/tianjiafangyuan.png</normaloff>:/images/tianjiafangyuan.png</iconset>
          </property>
         </item>
@@ -72,7 +72,7 @@
           <string>合租</string>
          </property>
          <property name="icon">
-          <iconset resource="main.qrc">
+          <iconset>
            <normaloff>:/images/tianjiafangyuan.png</normaloff>:/images/tianjiafangyuan.png</iconset>
          </property>
         </item>
@@ -703,9 +703,7 @@
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="main.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>buttonBox</sender>

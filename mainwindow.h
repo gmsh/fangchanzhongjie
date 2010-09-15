@@ -27,6 +27,10 @@ private slots:
     void on_actionYuangongGuanli_triggerd();
     void on_actionQuanxianzuGuanli_triggered();
     void on_actionCanshuShezhi_triggerd();
+    void on_actionTianjiaFangyuan_triggered();
+    void on_actionTianjiaKehu_triggered();
+    void on_taskTreeWidget_itemActivated ( QTreeWidgetItem * item, int column );
+    void on_stackedWidget_currentChanged ( int index );
 };
 
 #endif // MAINWINDOW_H

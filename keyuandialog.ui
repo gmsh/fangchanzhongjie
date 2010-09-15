@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>客源信息</string>
   </property>
   <property name="windowIcon">
    <iconset resource="main.qrc">
@@ -268,6 +268,11 @@
         <item>
          <property name="text">
           <string>厂房</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>仓库</string>
          </property>
         </item>
         <item>

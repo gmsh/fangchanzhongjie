@@ -26,7 +26,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_7">
     <item row="0" column="0">
-     <widget class="QTreeWidget" name="tasktreeWidget">
+     <widget class="QTreeWidget" name="taskTreeWidget">
       <column>
        <property name="text">
         <string>任务管理</string>
@@ -170,7 +170,7 @@
     <item row="0" column="1" rowspan="2">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page">
        <layout class="QGridLayout" name="gridLayout_6">
@@ -188,8 +188,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -205,8 +205,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -222,8 +222,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -248,8 +248,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -272,6 +272,13 @@
             <widget class="QLabel" name="label_3">
              <property name="text">
               <string>房屋状态</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_73">
+             <property name="text">
+              <string>0</string>
              </property>
             </widget>
            </item>
@@ -741,8 +748,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -758,8 +765,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -775,8 +782,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -801,8 +808,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -825,6 +832,13 @@
             <widget class="QLabel" name="label_10">
              <property name="text">
               <string>房屋状态</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_74">
+             <property name="text">
+              <string>1</string>
              </property>
             </widget>
            </item>
@@ -1294,8 +1308,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -1311,8 +1325,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -1328,8 +1342,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -1354,8 +1368,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -1378,6 +1392,13 @@
             <widget class="QLabel" name="label_17">
              <property name="text">
               <string>房屋状态</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_75">
+             <property name="text">
+              <string>2</string>
              </property>
             </widget>
            </item>
@@ -1847,8 +1868,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -1864,8 +1885,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -1881,8 +1902,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -1894,7 +1915,7 @@
             <widget class="QComboBox" name="fangwuLeixingComboBox_3"/>
            </item>
            <item row="0" column="5">
-            <widget class="QComboBox" name="fangwuZhuangtaiComboBox_3"/>
+            <widget class="QComboBox" name="kehuZhuangtaiComboBox_3"/>
            </item>
            <item row="0" column="6">
             <widget class="QPushButton" name="advPushButton_3">
@@ -1907,8 +1928,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -1930,7 +1951,14 @@
            <item row="1" column="5">
             <widget class="QLabel" name="label_39">
              <property name="text">
-              <string>房屋状态</string>
+              <string>客户状态</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_76">
+             <property name="text">
+              <string>3</string>
              </property>
             </widget>
            </item>
@@ -2400,8 +2428,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -2417,8 +2445,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -2434,8 +2462,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -2447,7 +2475,7 @@
             <widget class="QComboBox" name="fangwuLeixingComboBox_4"/>
            </item>
            <item row="0" column="5">
-            <widget class="QComboBox" name="fangwuZhuangtaiComboBox_4"/>
+            <widget class="QComboBox" name="kehuZhuangtaiComboBox_4"/>
            </item>
            <item row="0" column="6">
             <widget class="QPushButton" name="advPushButton_4">
@@ -2460,8 +2488,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -2483,7 +2511,14 @@
            <item row="1" column="5">
             <widget class="QLabel" name="label_51">
              <property name="text">
-              <string>房屋状态</string>
+              <string>客户状态</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_77">
+             <property name="text">
+              <string>4</string>
              </property>
             </widget>
            </item>
@@ -2953,8 +2988,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -2970,8 +3005,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -2987,8 +3022,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -3000,7 +3035,7 @@
             <widget class="QComboBox" name="fangwuLeixingComboBox_5"/>
            </item>
            <item row="0" column="5">
-            <widget class="QComboBox" name="fangwuZhuangtaiComboBox_5"/>
+            <widget class="QComboBox" name="kehuZhuangtaiComboBox_5"/>
            </item>
            <item row="0" column="6">
             <widget class="QPushButton" name="advPushButton_5">
@@ -3013,8 +3048,8 @@
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
-               <height>32</height>
+               <width>16</width>
+               <height>16</height>
               </size>
              </property>
             </widget>
@@ -3036,7 +3071,14 @@
            <item row="1" column="5">
             <widget class="QLabel" name="label_63">
              <property name="text">
-              <string>房屋状态</string>
+              <string>客户状态</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_78">
+             <property name="text">
+              <string>5</string>
              </property>
             </widget>
            </item>

@@ -1,10 +1,15 @@
 #include "fangyuandialog.h"
 #include <QtCore/QDebug>
+#include "dbconnect.h"
 FangyuanDialog::FangyuanDialog(QWidget *parent, DBConnect *dbcon)
     :QDialog(parent)
 {
     setupUi(this);
     this->dbcon = dbcon;
+    this->fangwuLaiyuanComboBox->addItems(*(this->dbcon->fangkeLaiyuanList()));
+    this->zhiyeGuwenComboBox->addItems(*(this->dbcon->loginNames()));
+    this->suozaiChengquComboBox->addItems(*(this->dbcon->chengquList()));
+    this->dangqianZhuangtaiComboBox->addItems(*(this->dbcon->fangwuZhuangtaiList()));
     asChushouChuzu();
 }
 FangyuanDialog::~FangyuanDialog()

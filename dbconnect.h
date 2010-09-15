@@ -29,6 +29,10 @@ public:
     QSqlTableModel * canshu_chengqu;
 
     QStringList * quanxianzuList();
+    QStringList * chengquList();
+    QStringList * fangwuZhuangtaiList();
+    QStringList * kekuZhuangtaiList();
+    QStringList * fangkeLaiyuanList();
 
 signals:
     void loginSuccessed();

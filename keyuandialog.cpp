@@ -7,6 +7,10 @@ KeyuanDialog::KeyuanDialog(QWidget *parent, DBConnect *dbcon)
 {
     setupUi(this);
     this->dbcon = dbcon;
+    this->kehuLaiyuanComboBox->addItems(*(this->dbcon->fangkeLaiyuanList()));
+    this->suozaiChengquComboBox->addItems(*(this->dbcon->chengquList()));
+    this->zhiyeGuwenComboBox->addItems(*(this->dbcon->loginNames()));
+    this->dangqianZhuangtaiComboBox->addItems(*(this->dbcon->kekuZhuangtaiList()));
     asQiugouQiuzu();
 }
 KeyuanDialog::~KeyuanDialog()
