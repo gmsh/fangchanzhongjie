@@ -12,6 +12,7 @@ CanshuGuanliDialog::CanshuGuanliDialog(QWidget *parent, DBConnect *dbcon)
     this->genjinFangshiTableView->setModel(dbcon->canshu_genjinfangshi);
     this->fukuanFangshiTableView->setModel(dbcon->canshu_fukuanfangshi);
     this->fenchengShuomingTableView->setModel(dbcon->canshu_fenchengshuoming);
+    this->chengquTableView->setModel(dbcon->canshu_chengqu);
 }
 CanshuGuanliDialog::~CanshuGuanliDialog()
 {
@@ -39,6 +40,8 @@ void CanshuGuanliDialog::on_canshuFenleiTreeWidget_itemActivated(QTreeWidgetItem
     }else if(*canshu == tr("分成说明")){
         this->stackedWidget->setCurrentIndex(5);
         qDebug() << 5;
+    }else if(*canshu == tr("城区")){
+        this->stackedWidget->setCurrentIndex(6);
     }
 }
 void CanshuGuanliDialog::on_addPushButton_clicked()
@@ -62,6 +65,9 @@ void CanshuGuanliDialog::on_addPushButton_clicked()
         break;
     case 5:
         this->fenchengShuomingTableView->model()->insertRow(this->fenchengShuomingTableView->model()->rowCount());
+        break;
+    case 6:
+        this->chengquTableView->model()->insertRow(this->chengquTableView->model()->rowCount());
         break;
 
     }
@@ -90,6 +96,9 @@ void CanshuGuanliDialog::on_modifyPushButton_clicked()
     case 5:
         view = this->fenchengShuomingTableView;
         break;
+    case 6:
+        view = this->chengquTableView;
+        break;
     }
     view->edit(view->currentIndex());
 }
@@ -117,6 +126,8 @@ void CanshuGuanliDialog::on_deletePushButton_clicked()
     case 5:
         view = this->fenchengShuomingTableView;
         break;
+    case 6:
+        view = this->chengquTableView;
     }
     view->model()->removeRow(view->currentIndex().row());
 }

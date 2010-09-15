@@ -57,11 +57,15 @@ DBConnect::DBConnect()
     this->canshu_fenchengshuoming->setHeaderData(0, Qt::Horizontal, tr("编号"));
     this->canshu_fenchengshuoming->setHeaderData(1, Qt::Horizontal, tr("名称"));
     this->canshu_fenchengshuoming->select();
+    this->canshu_chengqu = new QSqlTableModel(this);
+    this->canshu_chengqu->setTable("canshu_chengqu");
+    this->canshu_chengqu->setHeaderData(0, Qt::Horizontal, tr("编号"));
+    this->canshu_chengqu->setHeaderData(1, Qt::Horizontal, tr("名称"));
 }
 
 DBConnect::~DBConnect()
 {
-
+    this->db->close();
 }
 
 void DBConnect::login(const QString &loginName, const QString &passwd)
@@ -92,9 +96,91 @@ QStringList * DBConnect::loginNames()
     QStringList * list = new QStringList;
     QSqlQuery query;
     query.exec("select yuangongxingming from yuangong");
-    while(query.next())
-    {
+    while(query.next()){
         *list << query.value(0).toString();
     }
     return list;
+}
+
+QStringList * DBConnect::quanxianzuList()
+{
+    QSqlQuery query;
+    query.exec("select mingcheng from quanxianzu");
+    QStringList * list = new QStringList;
+    while(query.next()){
+        //qDebug() << "dbcon 111 add " << query.value(0).toString();
+        *list << query.value(0).toString();
+    }
+    return list;
+}
+
+bool DBConnect::insertIntoQuanxianZu(QString *mingcheng, bool a, bool b, bool c, bool d, bool e, bool f, bool g, bool h, bool i, bool j, bool k, bool l)
+{
+    QSqlQuery query;
+    query.exec("delete from quanxianzu where mingcheng = '" + *mingcheng + "'");
+    QString sql = "insert into quanxianzu values( '";
+    sql += *mingcheng;
+    sql += "' ,";
+    sql += parseBool(a);
+    sql += ", ";
+    sql += parseBool(b);
+    sql += ", ";
+    sql += parseBool(c);
+    sql += ", ";
+    sql += parseBool(d);
+    sql += ", ";
+    sql += parseBool(e);
+    sql += ", ";
+    sql += parseBool(f);
+    sql += ", ";
+    sql += parseBool(g);
+    sql += ", ";
+    sql += parseBool(h);
+    sql += ", ";
+    sql += parseBool(i);
+    sql += ", ";
+    sql += parseBool(j);
+    sql += ", ";
+    sql += parseBool(k);
+    sql += ", ";
+    sql += parseBool(l);
+    sql += ")";
+    qDebug() << sql;
+    return query.exec(sql);
+    //return true;
+}
+
+QString & DBConnect::parseBool(bool a)
+{
+    if(a)
+        return *(new QString("true"));
+    else
+        return *(new QString("false"));
+}
+
+bool DBConnect::deleteQuanxianZu(QString *mingcheng)
+{
+    QSqlQuery query;
+    return query.exec("delete from quanxianzu where mingcheng = '" + *mingcheng + "'");
+    //return true;
+}
+
+void DBConnect::getQuanxian(QString *mingcheng, bool *a, bool *b, bool *c, bool *d, bool *e, bool *f, bool *g, bool *h, bool *i, bool *j, bool *k, bool *l)
+{
+    QSqlQuery query;
+    query.exec("select * from quanxianzu where mingcheng = '" + *mingcheng + "'");
+    query.next();
+
+    *a = query.value(1).toBool();
+    *b = query.value(2).toBool();
+    *c = query.value(3).toBool();
+    *d = query.value(4).toBool();
+    *e = query.value(5).toBool();
+    *f = query.value(6).toBool();
+    *g = query.value(7).toBool();
+    *h = query.value(8).toBool();
+    *i = query.value(9).toBool();
+    *j = query.value(10).toBool();
+    *k = query.value(11).toBool();
+    *l = query.value(12).toBool();
 }

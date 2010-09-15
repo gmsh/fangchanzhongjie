@@ -3,7 +3,8 @@ SOURCES += main.cpp \
     dbconnect.cpp \
     yuangongguanlidialog.cpp \
     canshuguanlidialog.cpp \
-    quanxianzushezhidialog.cpp
+    quanxianzushezhidialog.cpp \
+    quanxianzuguanlidialog.cpp
 QT += sql
 RESOURCES += main.qrc
 OTHER_FILES += welcome.png \
@@ -37,4 +38,5 @@ HEADERS += logindialog.h \
     dbconnect.h \
     yuangongguanlidialog.h \
     canshuguanlidialog.h \
-    quanxianzushezhidialog.h
+    quanxianzushezhidialog.h \
+    quanxianzuguanlidialog.h

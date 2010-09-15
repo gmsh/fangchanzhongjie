@@ -81,6 +81,15 @@
           <normaloff>:/images/fencheng.png</normaloff>:/images/fencheng.png</iconset>
         </property>
        </item>
+       <item>
+        <property name="text">
+         <string>城区</string>
+        </property>
+        <property name="icon">
+         <iconset resource="main.qrc">
+          <normaloff>:/images/tianjiafangyuan.png</normaloff>:/images/tianjiafangyuan.png</iconset>
+        </property>
+       </item>
       </widget>
      </item>
      <item row="0" column="1">
@@ -168,7 +177,7 @@
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>6</number>
             </property>
             <widget class="QWidget" name="page">
              <layout class="QGridLayout" name="gridLayout_2">
@@ -178,37 +187,44 @@
              </layout>
             </widget>
             <widget class="QWidget" name="page_2">
-             <layout class="QFormLayout" name="formLayout_2">
+             <layout class="QGridLayout" name="gridLayout_8">
               <item row="0" column="0">
                <widget class="QTableView" name="fangyuanZhuangTaiTableView"/>
               </item>
              </layout>
             </widget>
             <widget class="QWidget" name="page_3">
-             <layout class="QFormLayout" name="formLayout_3">
+             <layout class="QGridLayout" name="gridLayout_7">
               <item row="0" column="0">
                <widget class="QTableView" name="kehuZhuangtaiTableView"/>
               </item>
              </layout>
             </widget>
             <widget class="QWidget" name="page_4">
-             <layout class="QFormLayout" name="formLayout_4">
+             <layout class="QGridLayout" name="gridLayout_9">
               <item row="0" column="0">
                <widget class="QTableView" name="genjinFangshiTableView"/>
               </item>
              </layout>
             </widget>
             <widget class="QWidget" name="page_5">
-             <layout class="QFormLayout" name="formLayout_5">
+             <layout class="QGridLayout" name="gridLayout_10">
               <item row="0" column="0">
                <widget class="QTableView" name="fukuanFangshiTableView"/>
               </item>
              </layout>
             </widget>
             <widget class="QWidget" name="page_6">
-             <layout class="QFormLayout" name="formLayout_6">
+             <layout class="QGridLayout" name="gridLayout_11">
               <item row="0" column="0">
                <widget class="QTableView" name="fenchengShuomingTableView"/>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_7">
+             <layout class="QGridLayout" name="gridLayout_12">
+              <item row="0" column="0">
+               <widget class="QTableView" name="chengquTableView"/>
               </item>
              </layout>
             </widget>
