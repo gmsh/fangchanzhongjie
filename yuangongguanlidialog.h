@@ -14,7 +14,6 @@ class YuangongGuanliDialog : public QDialog , public Ui::yuangongGuanliDialog
 public:
     YuangongGuanliDialog(QWidget * parent = 0, DBConnect * dbcon = 0);
     ~YuangongGuanliDialog();
-    void setTableModel(QSqlTableModel * tableModel);
 protected:
     QSqlTableModel *tableModel;
 
@@ -23,6 +22,7 @@ private slots:
     void on_deletePushButton_clicked();
     void on_modifyPushButton_clicked();
 private:
+    void setTableModel(QSqlTableModel * tableModel);
     DateDelegate * dateDelegate;
     ComboDelegate * xingbieDelegate;
     ComboDelegate * xueliDelegate;

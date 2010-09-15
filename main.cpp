@@ -8,6 +8,7 @@
 #include "canshuguanlidialog.h"
 #include "quanxianzushezhidialog.h"
 #include "quanxianzuguanlidialog.h"
+#include "fangyuandialog.h"
 #include "mainwindow.h"
 
 int main(int argc, char * argv[])
@@ -34,8 +35,10 @@ int main(int argc, char * argv[])
 
     /*QuanxianzuGuanliDialog quanxianzuGuanliDialog(0,&dbcon);
     quanxianzuGuanliDialog.show();*/
-    MainWindow mainWindow(&dbcon);
-    mainWindow.show();
+    /*MainWindow mainWindow(&dbcon);
+    mainWindow.show();*/
+    FangyuanDialog fangyuanDialog(0, &dbcon);
+    fangyuanDialog.show();
 
     return app.exec();
 }

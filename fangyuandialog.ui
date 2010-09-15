@@ -199,7 +199,98 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QComboBox" name="fangwuLeiXingComboBox"/>
+       <widget class="QComboBox" name="fangwuLeiXingComboBox">
+        <item>
+         <property name="text">
+          <string>1室</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1室1厅</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2室</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2室1厅</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2室2厅</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3室</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3室1厅</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3室2厅</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>写字楼</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>办公室</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>商住两用</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>门面房</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>商铺</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>厂房</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>仓库</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>别墅</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>地皮</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>其他</string>
+         </property>
+        </item>
+       </widget>
       </item>
       <item row="1" column="2">
        <spacer name="horizontalSpacer_2">
@@ -326,7 +417,28 @@
        </widget>
       </item>
       <item row="3" column="4">
-       <widget class="QComboBox" name="zhuangxiuBiaozhunComboBox"/>
+       <widget class="QComboBox" name="zhuangxiuBiaozhunComboBox">
+        <item>
+         <property name="text">
+          <string>毛坯房</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>简单装修</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>中档装修</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>豪华装修</string>
+         </property>
+        </item>
+       </widget>
       </item>
       <item row="3" column="5">
        <spacer name="horizontalSpacer_8">

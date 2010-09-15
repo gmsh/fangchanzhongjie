@@ -49,7 +49,6 @@ void MainWindow::on_actionTuichuXitong_triggered()
 void MainWindow::on_actionYuangongGuanli_triggerd()
 {
     YuangongGuanliDialog yuangongGuanliDialog(this, this->dbcon);
-    //yuangongGuanliDialog.setTableModel(this->dbcon->yuangongModel);
     yuangongGuanliDialog.exec();
 }
 
