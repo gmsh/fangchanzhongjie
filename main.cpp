@@ -36,13 +36,13 @@ int main(int argc, char * argv[])
 
     /*QuanxianzuGuanliDialog quanxianzuGuanliDialog(0,&dbcon);
     quanxianzuGuanliDialog.show();*/
-    /*MainWindow mainWindow(&dbcon);
-    mainWindow.show();*/
+    MainWindow mainWindow(&dbcon);
+    mainWindow.show();
     /*FangyuanDialog fangyuanDialog(0, &dbcon);
     fangyuanDialog.show();*/
 
-    KeyuanDialog keyuanDialog(0, &dbcon);
-    keyuanDialog.show();
+    /*KeyuanDialog keyuanDialog(0, &dbcon);
+    keyuanDialog.show();*/
 
     return app.exec();
 }
