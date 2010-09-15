@@ -8,6 +8,7 @@
 #include "canshuguanlidialog.h"
 #include "quanxianzushezhidialog.h"
 #include "quanxianzuguanlidialog.h"
+#include "mainwindow.h"
 
 int main(int argc, char * argv[])
 {
@@ -21,9 +22,9 @@ int main(int argc, char * argv[])
     if(loginDialog->exec() == LoginDialog::Accepted){
         //
     }*/
-    YuangongGuanliDialog yuangongGuanliDialog(0);
+    /*YuangongGuanliDialog yuangongGuanliDialog(0);
     yuangongGuanliDialog.setTableModel(dbcon.yuangongModel);
-    yuangongGuanliDialog.show();
+    yuangongGuanliDialog.show();*/
 
     /*CanshuGuanliDialog canshuGuanliDialog(0, &dbcon);
     canshuGuanliDialog.show();*/
@@ -33,6 +34,8 @@ int main(int argc, char * argv[])
 
     /*QuanxianzuGuanliDialog quanxianzuGuanliDialog(0,&dbcon);
     quanxianzuGuanliDialog.show();*/
+    MainWindow mainWindow(&dbcon);
+    mainWindow.show();
 
     return app.exec();
 }

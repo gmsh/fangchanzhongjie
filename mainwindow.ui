@@ -197,7 +197,7 @@
    <addaction name="actionGenjinChaxun"/>
    <addaction name="separator"/>
    <addaction name="actionQiehuanDenglu"/>
-   <addaction name="actionXitongSheZhi"/>
+   <addaction name="actionXitongShezhi"/>
    <addaction name="separator"/>
    <addaction name="actionRuanjianBangzhu"/>
    <addaction name="actionTuichuXitong"/>
@@ -277,7 +277,7 @@
     <string>切换登录</string>
    </property>
   </action>
-  <action name="actionXitongSheZhi">
+  <action name="actionXitongShezhi">
    <property name="icon">
     <iconset resource="main.qrc">
      <normaloff>:/images/xitongshezhi.png</normaloff>:/images/xitongshezhi.png</iconset>
