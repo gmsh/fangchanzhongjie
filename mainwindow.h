@@ -11,7 +11,7 @@ class MainWindow
 {
     Q_OBJECT
 public:
-    MainWindow(DBConnect * dbcon);
+    MainWindow(DBConnect * dbcon, QString * loginName);
     ~MainWindow();
 private:
     DBConnect *dbcon;

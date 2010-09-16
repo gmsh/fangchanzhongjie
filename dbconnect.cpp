@@ -207,6 +207,14 @@ DBConnect::~DBConnect()
     this->db->close();
 }
 
+QString * DBConnect::getSuozaiQuanxianzu(QString *loginName)
+{
+    QSqlQuery query;
+    query.exec("select suozaiquanxianzu from yuangong where yuangongxingming = '" + *loginName +"' ");
+    query.next();
+    return new QString(query.value(0).toString());
+}
+
 void DBConnect::login(const QString &loginName, const QString &passwd)
 {
     QSqlQuery query;

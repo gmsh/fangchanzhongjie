@@ -18,13 +18,23 @@ int main(int argc, char * argv[])
     QApplication app(argc, argv);
     QTextCodec::setCodecForTr(QTextCodec::codecForLocale());
     DBConnect dbcon;
-    /*LoginDialog * loginDialog = new LoginDialog(0, dbcon.loginNames());
+    LoginDialog * loginDialog = new LoginDialog(0, dbcon.loginNames());
     QObject::connect(loginDialog, SIGNAL(loggined(QString,QString)), &dbcon, SLOT(login(QString,QString)));
     QObject::connect(&dbcon, SIGNAL(loginSuccessed()), loginDialog, SLOT(loginSuccessed()));
     QObject::connect(&dbcon, SIGNAL(loginFailed()), loginDialog, SLOT(loginFailed()));
-    if(loginDialog->exec() == LoginDialog::Accepted){
-        //
-    }*/
+//mainWindow.show();
+    if(loginDialog->exec() != LoginDialog::Accepted)
+        qApp->quit();
+
+    MainWindow mainWindow(&dbcon, new QString(loginDialog->loginNameComboBox->currentText()));
+
+        mainWindow.show();
+    //qDebug() << *(dbcon.getSuozaiQuanxianzu(new QString(QObject::tr("测试姓名"))));
+
+    /*bool a, b, c, d, e, f, g, h, i, j, k, l;
+    QString * suozaiquanxianzu = dbcon.getSuozaiQuanxianzu(new QString(QObject::tr("测试姓名")));
+    dbcon.getQuanxian(suozaiquanxianzu, &a, &b, &c, &d, &e, &f, &g, &h, &i, &j, &k, &l);
+    qDebug() << *suozaiquanxianzu;*/
     /*YuangongGuanliDialog yuangongGuanliDialog(0);
     yuangongGuanliDialog.setTableModel(dbcon.yuangongModel);
     yuangongGuanliDialog.show();*/
@@ -37,8 +47,6 @@ int main(int argc, char * argv[])
 
     /*QuanxianzuGuanliDialog quanxianzuGuanliDialog(0,&dbcon);
     quanxianzuGuanliDialog.show();*/
-    MainWindow mainWindow(&dbcon);
-    mainWindow.show();
 
     /*ChengjiaoQianyueDialog chengjiaoqianyuedialog(0, &dbcon);
     chengjiaoqianyuedialog.exec();*/

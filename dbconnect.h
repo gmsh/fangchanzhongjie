@@ -16,6 +16,7 @@ public:
     bool insertIntoQuanxianZu(QString * mingcheng, bool a, bool b, bool c, bool d, bool e, bool f
                               , bool g, bool h, bool i, bool j, bool k, bool l);
     bool deleteQuanxianZu(QString * mingcheng);
+    QString * getSuozaiQuanxianzu(QString * loginName);
     void getQuanxian(QString * mingcheng, bool * a,bool * b,bool * c,bool * d,bool * e,bool * f,bool * g,bool * h,bool * i,bool * j,bool * k,bool * l);
     void getChushouFangyuan(int bianhao,
                             QString * dqzt,
