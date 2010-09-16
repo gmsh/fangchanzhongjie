@@ -37,11 +37,11 @@ int main(int argc, char * argv[])
 
     /*QuanxianzuGuanliDialog quanxianzuGuanliDialog(0,&dbcon);
     quanxianzuGuanliDialog.show();*/
-    /*MainWindow mainWindow(&dbcon);
-    mainWindow.show();*/
+    MainWindow mainWindow(&dbcon);
+    mainWindow.show();
 
-    ChengjiaoQianyueDialog chengjiaoqianyuedialog(0, &dbcon);
-    chengjiaoqianyuedialog.exec();
+    /*ChengjiaoQianyueDialog chengjiaoqianyuedialog(0, &dbcon);
+    chengjiaoqianyuedialog.exec();*/
 
     /*FangyuanDialog fangyuanDialog(0, &dbcon);
     fangyuanDialog.show();*/

@@ -278,7 +278,7 @@
            <item row="1" column="0">
             <widget class="QLabel" name="label_73">
              <property name="text">
-              <string>0</string>
+              <string>出售房源</string>
              </property>
             </widget>
            </item>
@@ -677,64 +677,82 @@
             <string>跟进记录</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_5">
-            <item row="0" column="0">
-             <layout class="QVBoxLayout" name="verticalLayout_3">
-              <item>
-               <widget class="QWidget" name="widget_2" native="true">
-                <layout class="QGridLayout" name="gridLayout_4">
-                 <item row="0" column="0">
-                  <widget class="QPushButton" name="genjin_addPushButton_0">
-                   <property name="text">
-                    <string>添加</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <widget class="QPushButton" name="genjin_modifyPushButton_0">
-                   <property name="text">
-                    <string>修改</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/modify.png</normaloff>:/images/modify.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="2">
-                  <widget class="QPushButton" name="genjin_deletePushButton">
-                   <property name="text">
-                    <string>删除</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="3">
-                  <spacer name="horizontalSpacer_7">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>361</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QTableView" name="genjinTableView_0"/>
-              </item>
-             </layout>
+            <item row="0" column="0" colspan="5">
+             <widget class="QWidget" name="widget_2" native="true">
+              <layout class="QGridLayout" name="gridLayout_4">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="genjin_addPushButton_0">
+                 <property name="text">
+                  <string>添加</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="genjin_modifyPushButton_0">
+                 <property name="text">
+                  <string>应用修改</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/modify.png</normaloff>:/images/modify.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QPushButton" name="genjin_deletePushButton_0">
+                 <property name="text">
+                  <string>删除</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <spacer name="horizontalSpacer_7">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>361</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="rcomboBox_0"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QComboBox" name="fcomboBox_0"/>
+            </item>
+            <item row="1" column="3">
+             <widget class="QLineEdit" name="nlineEdit_0"/>
+            </item>
+            <item row="1" column="4">
+             <spacer name="horizontalSpacer_43">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>164</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="2" column="0" colspan="5">
+             <widget class="QTableView" name="genjinTableView_0"/>
             </item>
            </layout>
           </widget>
@@ -848,7 +866,7 @@
            <item row="1" column="0">
             <widget class="QLabel" name="label_74">
              <property name="text">
-              <string>1</string>
+              <string>出租房源</string>
              </property>
             </widget>
            </item>
@@ -1247,64 +1265,82 @@
             <string>跟进记录</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_11">
-            <item row="0" column="0">
-             <layout class="QVBoxLayout" name="verticalLayout_6">
-              <item>
-               <widget class="QWidget" name="widget_4" native="true">
-                <layout class="QGridLayout" name="gridLayout_12">
-                 <item row="0" column="0">
-                  <widget class="QPushButton" name="genjin_addPushButton_1">
-                   <property name="text">
-                    <string>添加</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <widget class="QPushButton" name="genjin_modifyPushButton_1">
-                   <property name="text">
-                    <string>修改</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/modify.png</normaloff>:/images/modify.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="2">
-                  <widget class="QPushButton" name="genjin_deletePushButton_2">
-                   <property name="text">
-                    <string>删除</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="3">
-                  <spacer name="horizontalSpacer_14">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>361</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QTableView" name="genjinTableView_1"/>
-              </item>
-             </layout>
+            <item row="0" column="0" colspan="5">
+             <widget class="QWidget" name="widget_4" native="true">
+              <layout class="QGridLayout" name="gridLayout_12">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="genjin_addPushButton_1">
+                 <property name="text">
+                  <string>添加</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="genjin_modifyPushButton_1">
+                 <property name="text">
+                  <string>应用修改</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/modify.png</normaloff>:/images/modify.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QPushButton" name="genjin_deletePushButton_1">
+                 <property name="text">
+                  <string>删除</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <spacer name="horizontalSpacer_14">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>361</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="rcomboBox_1"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QComboBox" name="fcomboBox_1"/>
+            </item>
+            <item row="1" column="3">
+             <widget class="QLineEdit" name="nlineEdit_1"/>
+            </item>
+            <item row="1" column="4">
+             <spacer name="horizontalSpacer_44">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>164</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="2" column="0" colspan="5">
+             <widget class="QTableView" name="genjinTableView_1"/>
             </item>
            </layout>
           </widget>
@@ -1418,7 +1454,7 @@
            <item row="1" column="0">
             <widget class="QLabel" name="label_75">
              <property name="text">
-              <string>2</string>
+              <string>合租房源</string>
              </property>
             </widget>
            </item>
@@ -1817,64 +1853,82 @@
             <string>跟进记录</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_17">
-            <item row="0" column="0">
-             <layout class="QVBoxLayout" name="verticalLayout_9">
-              <item>
-               <widget class="QWidget" name="widget_6" native="true">
-                <layout class="QGridLayout" name="gridLayout_18">
-                 <item row="0" column="0">
-                  <widget class="QPushButton" name="genjin_addPushButton_2">
-                   <property name="text">
-                    <string>添加</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <widget class="QPushButton" name="genjin_modifyPushButton_2">
-                   <property name="text">
-                    <string>修改</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/modify.png</normaloff>:/images/modify.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="2">
-                  <widget class="QPushButton" name="genjin_deletePushButton_3">
-                   <property name="text">
-                    <string>删除</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="3">
-                  <spacer name="horizontalSpacer_21">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>361</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QTableView" name="genjinTableView_2"/>
-              </item>
-             </layout>
+            <item row="0" column="0" colspan="5">
+             <widget class="QWidget" name="widget_6" native="true">
+              <layout class="QGridLayout" name="gridLayout_18">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="genjin_addPushButton_2">
+                 <property name="text">
+                  <string>添加</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="genjin_modifyPushButton_2">
+                 <property name="text">
+                  <string>应用修改</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/modify.png</normaloff>:/images/modify.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QPushButton" name="genjin_deletePushButton_2">
+                 <property name="text">
+                  <string>删除</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <spacer name="horizontalSpacer_21">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>361</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="rcomboBox_2"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QComboBox" name="fcomboBox_2"/>
+            </item>
+            <item row="1" column="3">
+             <widget class="QLineEdit" name="nlineEdit_2"/>
+            </item>
+            <item row="1" column="4">
+             <spacer name="horizontalSpacer_45">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>164</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="2" column="0" colspan="5">
+             <widget class="QTableView" name="genjinTableView_2"/>
             </item>
            </layout>
           </widget>
@@ -1988,7 +2042,7 @@
            <item row="1" column="0">
             <widget class="QLabel" name="label_76">
              <property name="text">
-              <string>3</string>
+              <string>求购客户</string>
              </property>
             </widget>
            </item>
@@ -2387,64 +2441,82 @@
             <string>跟进记录</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_23">
-            <item row="0" column="0">
-             <layout class="QVBoxLayout" name="verticalLayout_12">
-              <item>
-               <widget class="QWidget" name="widget_8" native="true">
-                <layout class="QGridLayout" name="gridLayout_24">
-                 <item row="0" column="0">
-                  <widget class="QPushButton" name="genjin_addPushButton_3">
-                   <property name="text">
-                    <string>添加</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <widget class="QPushButton" name="genjin_modifyPushButton_3">
-                   <property name="text">
-                    <string>修改</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/modify.png</normaloff>:/images/modify.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="2">
-                  <widget class="QPushButton" name="genjin_deletePushButton_4">
-                   <property name="text">
-                    <string>删除</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="3">
-                  <spacer name="horizontalSpacer_28">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>361</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QTableView" name="genjinTableView_3"/>
-              </item>
-             </layout>
+            <item row="0" column="0" colspan="5">
+             <widget class="QWidget" name="widget_8" native="true">
+              <layout class="QGridLayout" name="gridLayout_24">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="genjin_addPushButton_3">
+                 <property name="text">
+                  <string>添加</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="genjin_modifyPushButton_3">
+                 <property name="text">
+                  <string>应用修改</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/modify.png</normaloff>:/images/modify.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QPushButton" name="genjin_deletePushButton_3">
+                 <property name="text">
+                  <string>删除</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <spacer name="horizontalSpacer_28">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>361</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="rcomboBox_3"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QComboBox" name="fcomboBox_3"/>
+            </item>
+            <item row="1" column="3">
+             <widget class="QLineEdit" name="nlineEdit_3"/>
+            </item>
+            <item row="1" column="4">
+             <spacer name="horizontalSpacer_46">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>164</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="2" column="0" colspan="5">
+             <widget class="QTableView" name="genjinTableView_3"/>
             </item>
            </layout>
           </widget>
@@ -2558,7 +2630,7 @@
            <item row="1" column="0">
             <widget class="QLabel" name="label_77">
              <property name="text">
-              <string>4</string>
+              <string>求租客户</string>
              </property>
             </widget>
            </item>
@@ -2957,64 +3029,82 @@
             <string>跟进记录</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_29">
-            <item row="0" column="0">
-             <layout class="QVBoxLayout" name="verticalLayout_15">
-              <item>
-               <widget class="QWidget" name="widget_10" native="true">
-                <layout class="QGridLayout" name="gridLayout_30">
-                 <item row="0" column="0">
-                  <widget class="QPushButton" name="genjin_addPushButton_4">
-                   <property name="text">
-                    <string>添加</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <widget class="QPushButton" name="genjin_modifyPushButton_4">
-                   <property name="text">
-                    <string>修改</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/modify.png</normaloff>:/images/modify.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="2">
-                  <widget class="QPushButton" name="genjin_deletePushButton_5">
-                   <property name="text">
-                    <string>删除</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="3">
-                  <spacer name="horizontalSpacer_35">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>361</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QTableView" name="genjinTableView_4"/>
-              </item>
-             </layout>
+            <item row="0" column="0" colspan="5">
+             <widget class="QWidget" name="widget_10" native="true">
+              <layout class="QGridLayout" name="gridLayout_30">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="genjin_addPushButton_4">
+                 <property name="text">
+                  <string>添加</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="genjin_modifyPushButton_4">
+                 <property name="text">
+                  <string>应用修改</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/modify.png</normaloff>:/images/modify.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QPushButton" name="genjin_deletePushButton_4">
+                 <property name="text">
+                  <string>删除</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <spacer name="horizontalSpacer_35">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>361</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="rcomboBox_4"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QComboBox" name="fcomboBox_4"/>
+            </item>
+            <item row="1" column="3">
+             <widget class="QLineEdit" name="nlineEdit_4"/>
+            </item>
+            <item row="1" column="4">
+             <spacer name="horizontalSpacer_47">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>164</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="2" column="0" colspan="5">
+             <widget class="QTableView" name="genjinTableView_4"/>
             </item>
            </layout>
           </widget>
@@ -3104,6 +3194,13 @@
              </property>
             </widget>
            </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_78">
+             <property name="text">
+              <string>合租客户</string>
+             </property>
+            </widget>
+           </item>
            <item row="1" column="3">
             <widget class="QLabel" name="label_61">
              <property name="text">
@@ -3122,13 +3219,6 @@
             <widget class="QLabel" name="label_63">
              <property name="text">
               <string>客户状态</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_78">
-             <property name="text">
-              <string>5</string>
              </property>
             </widget>
            </item>
@@ -3527,64 +3617,82 @@
             <string>跟进记录</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_35">
-            <item row="0" column="0">
-             <layout class="QVBoxLayout" name="verticalLayout_18">
-              <item>
-               <widget class="QWidget" name="widget_12" native="true">
-                <layout class="QGridLayout" name="gridLayout_36">
-                 <item row="0" column="0">
-                  <widget class="QPushButton" name="genjin_addPushButton_5">
-                   <property name="text">
-                    <string>添加</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <widget class="QPushButton" name="genjin_modifyPushButton_5">
-                   <property name="text">
-                    <string>修改</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/modify.png</normaloff>:/images/modify.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="2">
-                  <widget class="QPushButton" name="genjin_deletePushButton_6">
-                   <property name="text">
-                    <string>删除</string>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="main.qrc">
-                     <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="3">
-                  <spacer name="horizontalSpacer_42">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>361</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QTableView" name="genjinTableView_5"/>
-              </item>
-             </layout>
+            <item row="0" column="0" colspan="5">
+             <widget class="QWidget" name="widget_12" native="true">
+              <layout class="QGridLayout" name="gridLayout_36">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="genjin_addPushButton_5">
+                 <property name="text">
+                  <string>添加</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="genjin_modifyPushButton_5">
+                 <property name="text">
+                  <string>应用修改</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/modify.png</normaloff>:/images/modify.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QPushButton" name="genjin_deletePushButton_5">
+                 <property name="text">
+                  <string>删除</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="main.qrc">
+                   <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <spacer name="horizontalSpacer_42">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>361</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="rcomboBox_5"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QComboBox" name="fcomboBox_5"/>
+            </item>
+            <item row="1" column="3">
+             <widget class="QLineEdit" name="nlineEdit_5"/>
+            </item>
+            <item row="1" column="4">
+             <spacer name="horizontalSpacer_48">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>164</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="2" column="0" colspan="5">
+             <widget class="QTableView" name="genjinTableView_5"/>
             </item>
            </layout>
           </widget>

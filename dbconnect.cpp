@@ -158,6 +158,48 @@ DBConnect::DBConnect()
     this->qianyue->setHeaderData(4, Qt::Horizontal, tr("提成方式"));
     this->qianyue->setHeaderData(5, Qt::Horizontal, tr("编号"));
     this->qianyue->select();
+
+    this->genjinchushou = new QSqlTableModel(this);
+    this->genjinchushou->setTable("genjinchushou");
+    this->genjinchushou->setHeaderData(1, Qt::Horizontal, tr("跟进人"));
+    this->genjinchushou->setHeaderData(2, Qt::Horizontal, tr("跟进方式"));
+    this->genjinchushou->setHeaderData(3, Qt::Horizontal, tr("跟进内容"));
+    this->genjinchushou->select();
+
+    this->genjinchuzu = new QSqlTableModel(this);
+    this->genjinchuzu->setTable("genjinchuzu");
+    this->genjinchuzu->setHeaderData(1, Qt::Horizontal, tr("跟进人"));
+    this->genjinchuzu->setHeaderData(2, Qt::Horizontal, tr("跟进方式"));
+    this->genjinchuzu->setHeaderData(3, Qt::Horizontal, tr("跟进内容"));
+    this->genjinchuzu->select();
+
+    this->genjinhezufang = new QSqlTableModel(this);
+    this->genjinhezufang->setTable("genjinhezufang");
+    this->genjinhezufang->setHeaderData(1, Qt::Horizontal, tr("跟进人"));
+    this->genjinhezufang->setHeaderData(2, Qt::Horizontal, tr("跟进方式"));
+    this->genjinhezufang->setHeaderData(3, Qt::Horizontal, tr("跟进内容"));
+    this->genjinhezufang->select();
+
+    this->genjinqiugou = new QSqlTableModel(this);
+    this->genjinqiugou->setTable("genjinqiugou");
+    this->genjinqiugou->setHeaderData(1, Qt::Horizontal, tr("跟进人"));
+    this->genjinqiugou->setHeaderData(2, Qt::Horizontal, tr("跟进方式"));
+    this->genjinqiugou->setHeaderData(3, Qt::Horizontal, tr("跟进内容"));
+    this->genjinqiugou->select();
+
+    this->genjinqiuzu = new QSqlTableModel(this);
+    this->genjinqiuzu->setTable("genjinqiuzu");
+    this->genjinqiuzu->setHeaderData(1, Qt::Horizontal, tr("跟进人"));
+    this->genjinqiuzu->setHeaderData(2, Qt::Horizontal, tr("跟进方式"));
+    this->genjinqiuzu->setHeaderData(3, Qt::Horizontal, tr("跟进内容"));
+    this->genjinqiuzu->select();
+
+    this->genjinhezuke = new QSqlTableModel(this);
+    this->genjinhezuke->setTable("genjinhezuke");
+    this->genjinhezuke->setHeaderData(1, Qt::Horizontal, tr("跟进人"));
+    this->genjinhezuke->setHeaderData(2, Qt::Horizontal, tr("跟进方式"));
+    this->genjinhezuke->setHeaderData(3, Qt::Horizontal, tr("跟进内容"));
+    this->genjinhezuke->select();
 }
 
 DBConnect::~DBConnect()
@@ -260,6 +302,16 @@ QStringList * DBConnect::keyuanList()
     return list;
 }
 
+QStringList * DBConnect::genjinFangshiList()
+{
+    QStringList * list = new QStringList;
+    QSqlQuery query;
+    query.exec("select mingcheng from canshu_genjinfangshi");
+    while(query.next()){
+        *list << query.value(0).toString();
+    }
+    return list;
+}
 
 bool DBConnect::insertIntoQuanxianZu(QString *mingcheng, bool a, bool b, bool c, bool d, bool e, bool f, bool g, bool h, bool i, bool j, bool k, bool l)
 {

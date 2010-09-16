@@ -84,6 +84,33 @@ private slots:
     void on_kehuZhuangtaiComboBox_5_currentIndexChanged ( const QString & text ) ;
 
     void on_actionQianyueChengjiao_triggered();
+
+    void on_genjin_addPushButton_0_clicked();
+    void on_genjin_modifyPushButton_0_clicked();
+    void on_genjin_deletePushButton_0_clicked();
+    void on_genjin_addPushButton_1_clicked();
+    void on_genjin_modifyPushButton_1_clicked();
+    void on_genjin_deletePushButton_1_clicked();
+    void on_genjin_addPushButton_2_clicked();
+    void on_genjin_modifyPushButton_2_clicked();
+    void on_genjin_deletePushButton_2_clicked();
+    void on_genjin_addPushButton_3_clicked();
+    void on_genjin_modifyPushButton_3_clicked();
+    void on_genjin_deletePushButton_3_clicked();
+    void on_genjin_addPushButton_4_clicked();
+    void on_genjin_modifyPushButton_4_clicked();
+    void on_genjin_deletePushButton_4_clicked();
+    void on_genjin_addPushButton_5_clicked();
+    void on_genjin_modifyPushButton_5_clicked();
+    void on_genjin_deletePushButton_5_clicked();
+
+    void on_genjinTableView_0_clicked();
+    void on_genjinTableView_1_clicked();
+    void on_genjinTableView_2_clicked();
+    void on_genjinTableView_3_clicked();
+    void on_genjinTableView_4_clicked();
+    void on_genjinTableView_5_clicked();
+
 };
 
 #endif // MAINWINDOW_H

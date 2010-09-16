@@ -5,11 +5,12 @@
 #include "fangyuandialog.h"
 #include "keyuandialog.h"
 #include "dbconnect.h"
-//#include "qianyuedialog.h"
+#include "chengjiaoqianyuedialog.h"
 #include <QtGui/QMenu>
 #include <QtGui/QAction>
 #include <QtGui/QMessageBox>
 #include <QtCore/QDebug>
+#include <QtSql/QSqlRecord>
 
 MainWindow::MainWindow(DBConnect *dbcon)
 {
@@ -187,6 +188,19 @@ MainWindow::MainWindow(DBConnect *dbcon)
     this->kehuZhuangtaiComboBox_4->addItems(*list);
     this->kehuZhuangtaiComboBox_5->addItems(*list);
 
+    this->rcomboBox_0->addItems(*(this->dbcon->loginNames()));
+    this->rcomboBox_1->addItems(*(this->dbcon->loginNames()));
+    this->rcomboBox_2->addItems(*(this->dbcon->loginNames()));
+    this->rcomboBox_3->addItems(*(this->dbcon->loginNames()));
+    this->rcomboBox_4->addItems(*(this->dbcon->loginNames()));
+    this->rcomboBox_5->addItems(*(this->dbcon->loginNames()));
+
+    this->fcomboBox_0->addItems(*(this->dbcon->genjinFangshiList()));
+    this->fcomboBox_1->addItems(*(this->dbcon->genjinFangshiList()));
+    this->fcomboBox_2->addItems(*(this->dbcon->genjinFangshiList()));
+    this->fcomboBox_3->addItems(*(this->dbcon->genjinFangshiList()));
+    this->fcomboBox_4->addItems(*(this->dbcon->genjinFangshiList()));
+    this->fcomboBox_5->addItems(*(this->dbcon->genjinFangshiList()));
 
     this->quanxianzuIcon = new QIcon(":/images/quanxian.png");
     this->actionYuangongGuanli = new QAction(this->actionQiehuanDenglu->icon(),tr("员工管理"), this);
@@ -203,6 +217,32 @@ MainWindow::MainWindow(DBConnect *dbcon)
     this->tableView_3->setModel(dbcon->qiugoukehu);
     this->tableView_4->setModel(dbcon->qiuzukehu);
     this->tableView_5->setModel(dbcon->hezukehu);
+
+    this->genjinTableView_0->setModel(this->dbcon->genjinchushou);
+    this->genjinTableView_0->setColumnHidden(0, true);
+    this->genjinTableView_1->setModel(this->dbcon->genjinchuzu);
+    this->genjinTableView_1->setColumnHidden(0, true);
+    this->genjinTableView_2->setModel(this->dbcon->genjinhezufang);
+    this->genjinTableView_2->setColumnHidden(0, true);
+    this->genjinTableView_3->setModel(this->dbcon->genjinqiugou);
+    this->genjinTableView_3->setColumnHidden(0, true);
+    this->genjinTableView_4->setModel(this->dbcon->genjinqiuzu);
+    this->genjinTableView_4->setColumnHidden(0, true);
+    this->genjinTableView_5->setModel(this->dbcon->genjinhezuke);
+    this->genjinTableView_5->setColumnHidden(0, true);
+
+    this->genjinTableView_0->setSelectionMode(QTableView::SingleSelection);
+    this->genjinTableView_0->setSelectionBehavior(QTableView::SelectRows);
+    this->genjinTableView_1->setSelectionMode(QTableView::SingleSelection);
+    this->genjinTableView_1->setSelectionBehavior(QTableView::SelectRows);
+    this->genjinTableView_2->setSelectionMode(QTableView::SingleSelection);
+    this->genjinTableView_2->setSelectionBehavior(QTableView::SelectRows);
+    this->genjinTableView_3->setSelectionMode(QTableView::SingleSelection);
+    this->genjinTableView_3->setSelectionBehavior(QTableView::SelectRows);
+    this->genjinTableView_4->setSelectionMode(QTableView::SingleSelection);
+    this->genjinTableView_4->setSelectionBehavior(QTableView::SelectRows);
+    this->genjinTableView_5->setSelectionMode(QTableView::SingleSelection);
+    this->genjinTableView_5->setSelectionBehavior(QTableView::SelectRows);
 
     this->tableView_0->setColumnHidden(5,true);
     this->tableView_0->setColumnHidden(8,true);
@@ -1508,7 +1548,8 @@ void MainWindow::on_tableView_0_clicked(){//set tabWidget data;
         this->lianxiDianhuaLabel_0->setText(lianxidianghua);
         this->shoujiLabel_0->setText(lianxishouji);
         this->beizhuLabel_0->setText(yezhushuoming);
-
+        this->dbcon->genjinchushou->setFilter(" bianhao = " + str.setNum(fangwubianhao));
+        this->genjinTableView_0->resizeColumnsToContents();
         break;
     case 1:
         this->tableView_1->selectRow(this->tableView_1->currentIndex().row());
@@ -1538,6 +1579,8 @@ void MainWindow::on_tableView_0_clicked(){//set tabWidget data;
         this->lianxiDianhuaLabel_1->setText(lianxidianghua);
         this->shoujiLabel_1->setText(lianxishouji);
         this->beizhuLabel_1->setText(yezhushuoming);
+        this->dbcon->genjinchuzu->setFilter(" bianhao = " + str.setNum(fangwubianhao));
+        this->genjinTableView_1->resizeColumnsToContents();
 
         break;
     case 2:
@@ -1568,9 +1611,12 @@ void MainWindow::on_tableView_0_clicked(){//set tabWidget data;
         this->lianxiDianhuaLabel_2->setText(lianxidianghua);
         this->shoujiLabel_2->setText(lianxishouji);
         this->beizhuLabel_2->setText(yezhushuoming);
+        this->dbcon->genjinhezufang->setFilter(" bianhao = " + str.setNum(fangwubianhao));
+        this->genjinTableView_2->resizeColumnsToContents();
 
         break;
     case 3:
+        kehubianhao = this->dbcon->qiugoukehu->record(this->tableView_3->currentIndex().row()).value(0).toInt();
         this->dbcon->getQiugouKehu(kehubianhao, &dangqianzhuangtai, &zhiyeguwen, &kehulaiyuan, &suozaichengqu,&fangwujiage, &fangwuleixing, &chanquanxingbie, &fangwumianji, & xinjiuchengdu, &suozailouceng, &zhuangxiubiaozhun, &loucengzongshu, &yixiangdizhi,
                                    &a, &b, &c, &d, &e, &f, &g, &h, &i, &j, &k, &l, &m, &n, &fangyuanxiangxixinxi,&yezhuxingming, &lianxidianghua, &lianxishouji, & yezhushuoming);
         this->jiageLabel_3->setText(str.setNum(fangwujiage));
@@ -1595,9 +1641,12 @@ void MainWindow::on_tableView_0_clicked(){//set tabWidget data;
         this->lianxiDianhuaLabel_3->setText(lianxidianghua);
         this->shoujiLabel_3->setText(lianxishouji);
         this->beizhuLabel_3->setText(yezhushuoming);
+        this->dbcon->genjinqiugou->setFilter(" bianhao = " + str.setNum(kehubianhao));
+        this->genjinTableView_3->resizeColumnsToContents();
 
         break;
     case 4:
+        kehubianhao = this->dbcon->qiuzukehu->record(this->tableView_4->currentIndex().row()).value(0).toInt();
         this->dbcon->getQiuzuKehu(kehubianhao, &dangqianzhuangtai, &zhiyeguwen, &kehulaiyuan, &suozaichengqu,&fangwujiage, &fangwuleixing, &chanquanxingbie, &fangwumianji, & xinjiuchengdu, &suozailouceng, &zhuangxiubiaozhun, &loucengzongshu, &yixiangdizhi,
                                   &a, &b, &c, &d, &e, &f, &g, &h, &i, &j, &k, &l, &m, &n, &fangyuanxiangxixinxi,&yezhuxingming, &lianxidianghua, &lianxishouji, & yezhushuoming);
         this->jiageLabel_4->setText(str.setNum(fangwujiage));
@@ -1622,9 +1671,12 @@ void MainWindow::on_tableView_0_clicked(){//set tabWidget data;
         this->lianxiDianhuaLabel_4->setText(lianxidianghua);
         this->shoujiLabel_4->setText(lianxishouji);
         this->beizhuLabel_4->setText(yezhushuoming);
+        this->dbcon->genjinqiuzu->setFilter(" bianhao = " + str.setNum(kehubianhao));
+        this->genjinTableView_4->resizeColumnsToContents();
 
         break;
-    case 5:
+    case 5:        
+        kehubianhao = this->dbcon->hezukehu->record(this->tableView_5->currentIndex().row()).value(0).toInt();
         this->dbcon->getHezuKehu(kehubianhao, &dangqianzhuangtai, &zhiyeguwen, &kehulaiyuan, &suozaichengqu,&fangwujiage, &fangwuleixing, &chanquanxingbie, &fangwumianji, & xinjiuchengdu, &suozailouceng, &zhuangxiubiaozhun, &loucengzongshu, &yixiangdizhi,
                                  &a, &b, &c, &d, &e, &f, &g, &h, &i, &j, &k, &l, &m, &n, &fangyuanxiangxixinxi,&yezhuxingming, &lianxidianghua, &lianxishouji, & yezhushuoming);
         this->jiageLabel_5->setText(str.setNum(fangwujiage));
@@ -1649,6 +1701,8 @@ void MainWindow::on_tableView_0_clicked(){//set tabWidget data;
         this->lianxiDianhuaLabel_5->setText(lianxidianghua);
         this->shoujiLabel_5->setText(lianxishouji);
         this->beizhuLabel_5->setText(yezhushuoming);
+        this->dbcon->genjinhezuke->setFilter(" bianhao = " + str.setNum(kehubianhao));
+        this->genjinTableView_5->resizeColumnsToContents();
 
         break;
 
@@ -1944,6 +1998,277 @@ void MainWindow::on_kehuZhuangtaiComboBox_5_currentIndexChanged(const QString &t
 
 void MainWindow::on_actionQianyueChengjiao_triggered()
 {
-    //QianyueDialog qianyue(this, this->dbcon);
-    //qianyue.exec();
+    ChengjiaoQianyueDialog chengjiaodialog(this, this->dbcon);
+    chengjiaodialog.exec();
+}
+
+void MainWindow::on_genjin_addPushButton_0_clicked()
+{
+    QSqlTableModel * model = this->dbcon->genjinchushou;
+    int row = model->rowCount();
+    model->insertRows(row, 1);
+    model->setData(model->index(row, 0), this->dbcon->chushoufangyuan->record(this->tableView_0->currentIndex().row()).value(0).toInt());
+    model->setData(model->index(row, 1), this->rcomboBox_0->currentText());
+    model->setData(model->index(row, 2), this->fcomboBox_0->currentText());
+    model->setData(model->index(row, 3), this->nlineEdit_0->text());
+    model->submitAll();
+}
+
+void MainWindow::on_genjin_modifyPushButton_0_clicked()
+{
+    QSqlTableModel * model = this->dbcon->genjinchushou;
+    int row = this->genjinTableView_0->currentIndex().row();
+    model->setData(model->index(row, 1), this->rcomboBox_0->currentText());
+    model->setData(model->index(row, 2), this->fcomboBox_0->currentText());
+    model->setData(model->index(row, 3), this->nlineEdit_0->text());
+    model->submitAll();
+}
+
+void MainWindow::on_genjin_deletePushButton_0_clicked()
+{
+    qDebug() << this->genjinTableView_0->currentIndex().row() << this->dbcon->genjinchushou->removeRow(this->genjinTableView_0->currentIndex().row());
+}
+
+
+void MainWindow::on_genjin_addPushButton_1_clicked()
+{
+    QSqlTableModel * model = this->dbcon->genjinchuzu;
+    int row = model->rowCount();
+    model->insertRows(row, 1);
+    model->setData(model->index(row, 0), this->dbcon->chuzufangyuan->record(this->tableView_0->currentIndex().row()).value(0).toInt());
+    model->setData(model->index(row, 1), this->rcomboBox_0->currentText());
+    model->setData(model->index(row, 2), this->fcomboBox_0->currentText());
+    model->setData(model->index(row, 3), this->nlineEdit_0->text());
+    model->submitAll();
+}
+
+void MainWindow::on_genjin_modifyPushButton_1_clicked()
+{
+    
+}
+
+void MainWindow::on_genjin_deletePushButton_1_clicked()
+{
+    this->dbcon->genjinchuzu->removeRow(this->genjinTableView_1->currentIndex().row());
+}
+
+
+void MainWindow::on_genjin_addPushButton_2_clicked()
+{
+    QSqlTableModel * model = this->dbcon->genjinhezufang;
+    int row = model->rowCount();
+    model->insertRows(row, 1);
+    model->setData(model->index(row, 0), this->dbcon->hezufangyuan->record(this->tableView_0->currentIndex().row()).value(0).toInt());
+    model->setData(model->index(row, 1), this->rcomboBox_0->currentText());
+    model->setData(model->index(row, 2), this->fcomboBox_0->currentText());
+    model->setData(model->index(row, 3), this->nlineEdit_0->text());
+    model->submitAll();
+
+}
+
+void MainWindow::on_genjin_modifyPushButton_2_clicked()
+{
+
+    qDebug()<<"cli";
+}
+
+void MainWindow::on_genjin_deletePushButton_2_clicked()
+{
+    this->dbcon->genjinhezufang->removeRow(this->genjinTableView_2->currentIndex().row());
+}
+
+
+void MainWindow::on_genjin_addPushButton_3_clicked()
+{
+    QSqlTableModel * model = this->dbcon->genjinqiugou;
+    int row = model->rowCount();
+    model->insertRows(row, 1);
+    model->setData(model->index(row, 0), this->dbcon->qiugoukehu->record(this->tableView_0->currentIndex().row()).value(0).toInt());
+    model->setData(model->index(row, 1), this->rcomboBox_0->currentText());
+    model->setData(model->index(row, 2), this->fcomboBox_0->currentText());
+    model->setData(model->index(row, 3), this->nlineEdit_0->text());
+    model->submitAll();
+
+}
+
+void MainWindow::on_genjin_modifyPushButton_3_clicked()
+{
+
+    qDebug()<<"cli";
+}
+
+void MainWindow::on_genjin_deletePushButton_3_clicked()
+{
+    this->dbcon->genjinqiugou->removeRow(this->genjinTableView_3->currentIndex().row());
+}
+
+void MainWindow::on_genjin_addPushButton_4_clicked()
+{
+    QSqlTableModel * model = this->dbcon->genjinqiuzu;
+    int row = model->rowCount();
+    model->insertRows(row, 1);
+    model->setData(model->index(row, 0), this->dbcon->qiuzukehu->record(this->tableView_0->currentIndex().row()).value(0).toInt());
+    model->setData(model->index(row, 1), this->rcomboBox_0->currentText());
+    model->setData(model->index(row, 2), this->fcomboBox_0->currentText());
+    model->setData(model->index(row, 3), this->nlineEdit_0->text());
+    model->submitAll();
+
+}
+
+void MainWindow::on_genjin_modifyPushButton_4_clicked()
+{
+
+    qDebug()<<"cli";
+}
+
+void MainWindow::on_genjin_deletePushButton_4_clicked()
+{
+    this->dbcon->genjinqiuzu->removeRow(this->genjinTableView_4->currentIndex().row());
+}
+
+
+void MainWindow::on_genjin_addPushButton_5_clicked()
+{
+    QSqlTableModel * model = this->dbcon->genjinhezuke;
+    int row = model->rowCount();
+    model->insertRows(row, 1);
+    model->setData(model->index(row, 0), this->dbcon->hezukehu->record(this->tableView_0->currentIndex().row()).value(0).toInt());
+    model->setData(model->index(row, 1), this->rcomboBox_0->currentText());
+    model->setData(model->index(row, 2), this->fcomboBox_0->currentText());
+    model->setData(model->index(row, 3), this->nlineEdit_0->text());
+    model->submitAll();
+
+}
+
+void MainWindow::on_genjin_modifyPushButton_5_clicked()
+{
+
+    qDebug()<<"cli";
+}
+
+void MainWindow::on_genjin_deletePushButton_5_clicked()
+{
+    this->dbcon->genjinhezuke->removeRow(this->genjinTableView_5->currentIndex().row());
+}
+
+void MainWindow::on_genjinTableView_0_clicked(){
+    QSqlRecord record = this->dbcon->genjinchushou->record(this->genjinTableView_0->currentIndex().row());
+    QComboBox * combo;
+    QString * value;
+    int a;
+    combo = this->rcomboBox_0;
+    value = &(record.value(1).toString());
+    if(-1 != (a = combo->findText(*value)))
+        combo->setCurrentIndex(a);
+    else
+        combo->insertItem(0,*value);
+
+    combo = this->fcomboBox_0;
+    value = &(record.value(2).toString());
+    if(-1 != (a = combo->findText(*value)))
+        combo->setCurrentIndex(a);
+    else
+        combo->insertItem(0,*value);
+    this->nlineEdit_0->setText(record.value(3).toString());
+
+}
+void MainWindow::on_genjinTableView_1_clicked(){
+    QSqlRecord record = this->dbcon->genjinchuzu->record(this->genjinTableView_1->currentIndex().row());
+    QComboBox * combo;
+    QString * value;
+    int a;
+    combo = this->rcomboBox_1;
+    value = &(record.value(1).toString());
+    if(-1 != (a = combo->findText(*value)))
+        combo->setCurrentIndex(a);
+    else
+        combo->insertItem(0,*value);
+
+    combo = this->fcomboBox_1;
+    value = &(record.value(2).toString());
+    if(-1 != (a = combo->findText(*value)))
+        combo->setCurrentIndex(a);
+    else
+        combo->insertItem(0,*value);
+    this->nlineEdit_1->setText(record.value(3).toString());
+}
+void MainWindow::on_genjinTableView_2_clicked(){
+    QSqlRecord record = this->dbcon->genjinhezufang->record(this->genjinTableView_2->currentIndex().row());
+    QComboBox * combo;
+    QString * value;
+    int a;
+    combo = this->rcomboBox_2;
+    value = &(record.value(1).toString());
+    if(-1 != (a = combo->findText(*value)))
+        combo->setCurrentIndex(a);
+    else
+        combo->insertItem(0,*value);
+
+    combo = this->fcomboBox_2;
+    value = &(record.value(2).toString());
+    if(-1 != (a = combo->findText(*value)))
+        combo->setCurrentIndex(a);
+    else
+        combo->insertItem(0,*value);
+    this->nlineEdit_2->setText(record.value(3).toString());
+}
+void MainWindow::on_genjinTableView_3_clicked(){
+    QSqlRecord record = this->dbcon->genjinqiugou->record(this->genjinTableView_3->currentIndex().row());
+    QComboBox * combo;
+    QString * value;
+    int a;
+    combo = this->rcomboBox_3;
+    value = &(record.value(1).toString());
+    if(-1 != (a = combo->findText(*value)))
+        combo->setCurrentIndex(a);
+    else
+        combo->insertItem(0,*value);
+
+    combo = this->fcomboBox_3;
+    value = &(record.value(2).toString());
+    if(-1 != (a = combo->findText(*value)))
+        combo->setCurrentIndex(a);
+    else
+        combo->insertItem(0,*value);
+    this->nlineEdit_3->setText(record.value(3).toString());
+}
+void MainWindow::on_genjinTableView_4_clicked(){
+    QSqlRecord record = this->dbcon->genjinqiuzu->record(this->genjinTableView_4->currentIndex().row());
+    QComboBox * combo;
+    QString * value;
+    int a;
+    combo = this->rcomboBox_4;
+    value = &(record.value(1).toString());
+    if(-1 != (a = combo->findText(*value)))
+        combo->setCurrentIndex(a);
+    else
+        combo->insertItem(0,*value);
+
+    combo = this->fcomboBox_4;
+    value = &(record.value(2).toString());
+    if(-1 != (a = combo->findText(*value)))
+        combo->setCurrentIndex(a);
+    else
+        combo->insertItem(0,*value);
+    this->nlineEdit_4->setText(record.value(3).toString());
+}
+void MainWindow::on_genjinTableView_5_clicked(){
+    QSqlRecord record = this->dbcon->genjinhezuke->record(this->genjinTableView_5->currentIndex().row());
+    QComboBox * combo;
+    QString * value;
+    int a;
+    combo = this->rcomboBox_5;
+    value = &(record.value(1).toString());
+    if(-1 != (a = combo->findText(*value)))
+        combo->setCurrentIndex(a);
+    else
+        combo->insertItem(0,*value);
+
+    combo = this->fcomboBox_5;
+    value = &(record.value(2).toString());
+    if(-1 != (a = combo->findText(*value)))
+        combo->setCurrentIndex(a);
+    else
+        combo->insertItem(0,*value);
+    this->nlineEdit_5->setText(record.value(3).toString());
 }

@@ -446,6 +446,12 @@ public:
     QSqlTableModel * qiuzukehu;
     QSqlTableModel * hezukehu;
     QSqlTableModel * qianyue;
+    QSqlTableModel * genjinchushou;
+    QSqlTableModel * genjinchuzu;
+    QSqlTableModel * genjinhezufang;
+    QSqlTableModel * genjinqiugou;
+    QSqlTableModel * genjinqiuzu;
+    QSqlTableModel * genjinhezuke;
 
     QStringList * quanxianzuList();
     QStringList * chengquList();
@@ -455,6 +461,7 @@ public:
     QStringList * fenchenFangshiList();
     QStringList * fangyuanList();
     QStringList * keyuanList();
+    QStringList * genjinFangshiList();
 
 signals:
     void loginSuccessed();
