@@ -107,6 +107,48 @@ DBConnect::DBConnect()
 
     this->hezufangyuan->select();
 
+    this->qiugoukehu = new QSqlTableModel(this);
+    this->qiugoukehu->setTable("qiugoukehu");
+    this->qiugoukehu->setHeaderData(0, Qt::Horizontal, tr("编号"));
+    this->qiugoukehu->setHeaderData(1, Qt::Horizontal, tr("房屋状态"));
+    this->qiugoukehu->setHeaderData(2, Qt::Horizontal, tr("置业顾问"));
+    this->qiugoukehu->setHeaderData(3, Qt::Horizontal, tr("房屋来源"));
+    this->qiugoukehu->setHeaderData(4, Qt::Horizontal, tr("所在城区"));
+    this->qiugoukehu->setHeaderData(6, Qt::Horizontal, tr("户型"));
+    this->qiugoukehu->setHeaderData(7, Qt::Horizontal, tr("产权"));
+    this->qiugoukehu->setHeaderData(9, Qt::Horizontal, tr("新旧程度"));
+    this->qiugoukehu->setHeaderData(11, Qt::Horizontal, tr("装修标准"));
+
+    this->qiugoukehu->select();
+
+    this->qiuzukehu = new QSqlTableModel(this);
+    this->qiuzukehu->setTable("qiuzukehu");
+    this->qiuzukehu->setHeaderData(0, Qt::Horizontal, tr("编号"));
+    this->qiuzukehu->setHeaderData(1, Qt::Horizontal, tr("房屋状态"));
+    this->qiuzukehu->setHeaderData(2, Qt::Horizontal, tr("置业顾问"));
+    this->qiuzukehu->setHeaderData(3, Qt::Horizontal, tr("房屋来源"));
+    this->qiuzukehu->setHeaderData(4, Qt::Horizontal, tr("所在城区"));
+    this->qiuzukehu->setHeaderData(6, Qt::Horizontal, tr("户型"));
+    this->qiuzukehu->setHeaderData(7, Qt::Horizontal, tr("产权"));
+    this->qiuzukehu->setHeaderData(9, Qt::Horizontal, tr("新旧程度"));
+    this->qiuzukehu->setHeaderData(11, Qt::Horizontal, tr("装修标准"));
+
+    this->qiuzukehu->select();
+
+    this->hezukehu = new QSqlTableModel(this);
+    this->hezukehu->setTable("hezukehu");
+    this->hezukehu->setHeaderData(0, Qt::Horizontal, tr("编号"));
+    this->hezukehu->setHeaderData(1, Qt::Horizontal, tr("房屋状态"));
+    this->hezukehu->setHeaderData(2, Qt::Horizontal, tr("置业顾问"));
+    this->hezukehu->setHeaderData(3, Qt::Horizontal, tr("房屋来源"));
+    this->hezukehu->setHeaderData(4, Qt::Horizontal, tr("所在城区"));
+    this->hezukehu->setHeaderData(6, Qt::Horizontal, tr("户型"));
+    this->hezukehu->setHeaderData(7, Qt::Horizontal, tr("性别倾向"));
+    this->hezukehu->setHeaderData(9, Qt::Horizontal, tr("新旧程度"));
+    this->hezukehu->setHeaderData(11, Qt::Horizontal, tr("装修标准"));
+
+    this->hezukehu->select();
+
 }
 
 DBConnect::~DBConnect()
@@ -650,4 +692,384 @@ bool DBConnect::deleteFromHezufangyuan(int bianhao)
     QSqlQuery query;
     QString str;
     return query.exec("delete from hezufangyuan where fangwubianhao = " + str.setNum(bianhao));
+}
+
+bool DBConnect::deleteFromQiugouKehu(int bianhao)
+{
+    QSqlQuery query;
+    QString str;
+    return query.exec("delete from qiugoukehu where kehubianhao = " + str.setNum(bianhao));
+}
+
+bool DBConnect::deleteFromQiuzuKehu(int bianhao)
+{
+    QSqlQuery query;
+    QString str;
+    return query.exec("delete from qiuzukehu where kehubianhao = " + str.setNum(bianhao));
+}
+
+bool DBConnect::deleteFromHezuKehu(int bianhao)
+{
+    QSqlQuery query;
+    QString str;
+    return query.exec("delete from hezukehu where kehubianhao = " + str.setNum(bianhao));
+}
+
+bool DBConnect::insertQiugoukehu(int bianhao, QString dqzt, QString zygw, QString fwly, QString szcq, int fwjg, QString fwlx, QString cq, float fwmj, QString xjcd, int szlc, QString zxbz, int lczs, QString jtdz, bool a, bool b, bool c, bool d, bool e, bool f, bool g, bool h, bool i, bool j, bool k, bool l, bool m, bool n, QString fyxxx, QString yzum, QString lxdh, QString lxsj, QString yzsm)
+{
+    QSqlQuery query;
+
+    QString str;
+    query.exec("delete from qiugoukehu where kehubianhao = " + str.setNum(bianhao));
+    QString sql = "insert into qiugoukehu values( ";
+    sql += str.setNum(bianhao);
+    sql += ", '";
+    sql += dqzt;
+    sql += "','";
+    sql += zygw;
+    sql += "','";
+    sql += fwly;
+    sql += "','";
+    sql += szcq;
+    sql += "',";
+    sql += str.setNum(fwjg);
+    sql += ",'";
+    sql += fwlx;
+    sql += "','";
+    sql += cq;
+    sql += "',";
+    sql += str.setNum(fwmj);
+    sql += ",'";
+    sql += xjcd;
+    sql += "',";
+    sql += str.setNum(szlc);
+    sql += ",'";
+    sql += zxbz;
+    sql += "',";
+    sql += str.setNum(lczs);
+    sql += ",'";
+    sql += jtdz;
+    sql += "',";
+
+    sql += parseBool(a);
+    sql += ", ";
+    sql += parseBool(b);
+    sql += ", ";
+    sql += parseBool(c);
+    sql += ", ";
+    sql += parseBool(d);
+    sql += ", ";
+    sql += parseBool(e);
+    sql += ", ";
+    sql += parseBool(f);
+    sql += ", ";
+    sql += parseBool(g);
+    sql += ", ";
+    sql += parseBool(h);
+    sql += ", ";
+    sql += parseBool(i);
+    sql += ", ";
+    sql += parseBool(j);
+    sql += ", ";
+    sql += parseBool(k);
+    sql += ", ";
+    sql += parseBool(l);
+    sql += ", ";
+    sql += parseBool(m);
+    sql += ", ";
+    sql += parseBool(n);
+    sql += ", '";
+    sql += fyxxx;
+    sql += "','";
+    sql += yzum;
+    sql += "','";
+    sql += lxdh;
+    sql += "','";
+    sql += lxsj;
+    sql += "','";
+    sql += yzsm;
+    sql += "')";
+    //qDebug() << sql ;
+    return query.exec(sql);
+
+}
+bool DBConnect::insertQiuzukehu(int bianhao, QString dqzt, QString zygw, QString fwly, QString szcq, int fwjg, QString fwlx, QString cq, float fwmj, QString xjcd, int szlc, QString zxbz, int lczs, QString jtdz, bool a, bool b, bool c, bool d, bool e, bool f, bool g, bool h, bool i, bool j, bool k, bool l, bool m, bool n, QString fyxxx, QString yzum, QString lxdh, QString lxsj, QString yzsm)
+{
+    QSqlQuery query;
+
+    QString str;
+    query.exec("delete from qiuzukehu where kehubianhao = " + str.setNum(bianhao));
+    QString sql = "insert into qiuzukehu values( ";
+    sql += str.setNum(bianhao);
+    sql += ", '";
+    sql += dqzt;
+    sql += "','";
+    sql += zygw;
+    sql += "','";
+    sql += fwly;
+    sql += "','";
+    sql += szcq;
+    sql += "',";
+    sql += str.setNum(fwjg);
+    sql += ",'";
+    sql += fwlx;
+    sql += "','";
+    sql += cq;
+    sql += "',";
+    sql += str.setNum(fwmj);
+    sql += ",'";
+    sql += xjcd;
+    sql += "',";
+    sql += str.setNum(szlc);
+    sql += ",'";
+    sql += zxbz;
+    sql += "',";
+    sql += str.setNum(lczs);
+    sql += ",'";
+    sql += jtdz;
+    sql += "',";
+
+    sql += parseBool(a);
+    sql += ", ";
+    sql += parseBool(b);
+    sql += ", ";
+    sql += parseBool(c);
+    sql += ", ";
+    sql += parseBool(d);
+    sql += ", ";
+    sql += parseBool(e);
+    sql += ", ";
+    sql += parseBool(f);
+    sql += ", ";
+    sql += parseBool(g);
+    sql += ", ";
+    sql += parseBool(h);
+    sql += ", ";
+    sql += parseBool(i);
+    sql += ", ";
+    sql += parseBool(j);
+    sql += ", ";
+    sql += parseBool(k);
+    sql += ", ";
+    sql += parseBool(l);
+    sql += ", ";
+    sql += parseBool(m);
+    sql += ", ";
+    sql += parseBool(n);
+    sql += ", '";
+    sql += fyxxx;
+    sql += "','";
+    sql += yzum;
+    sql += "','";
+    sql += lxdh;
+    sql += "','";
+    sql += lxsj;
+    sql += "','";
+    sql += yzsm;
+    sql += "')";
+    //qDebug() << sql ;
+    return query.exec(sql);
+
+}
+bool DBConnect::insertHezukehu(int bianhao, QString dqzt, QString zygw, QString fwly, QString szcq, int fwjg, QString fwlx, QString cq, float fwmj, QString xjcd, int szlc, QString zxbz, int lczs, QString jtdz, bool a, bool b, bool c, bool d, bool e, bool f, bool g, bool h, bool i, bool j, bool k, bool l, bool m, bool n, QString fyxxx, QString yzum, QString lxdh, QString lxsj, QString yzsm)
+{
+    QSqlQuery query;
+
+    QString str;
+    query.exec("delete from hezukehu where kehubianhao = " + str.setNum(bianhao));
+    QString sql = "insert into hezukehu values( ";
+    sql += str.setNum(bianhao);
+    sql += ", '";
+    sql += dqzt;
+    sql += "','";
+    sql += zygw;
+    sql += "','";
+    sql += fwly;
+    sql += "','";
+    sql += szcq;
+    sql += "',";
+    sql += str.setNum(fwjg);
+    sql += ",'";
+    sql += fwlx;
+    sql += "','";
+    sql += cq;
+    sql += "',";
+    sql += str.setNum(fwmj);
+    sql += ",'";
+    sql += xjcd;
+    sql += "',";
+    sql += str.setNum(szlc);
+    sql += ",'";
+    sql += zxbz;
+    sql += "',";
+    sql += str.setNum(lczs);
+    sql += ",'";
+    sql += jtdz;
+    sql += "',";
+
+    sql += parseBool(a);
+    sql += ", ";
+    sql += parseBool(b);
+    sql += ", ";
+    sql += parseBool(c);
+    sql += ", ";
+    sql += parseBool(d);
+    sql += ", ";
+    sql += parseBool(e);
+    sql += ", ";
+    sql += parseBool(f);
+    sql += ", ";
+    sql += parseBool(g);
+    sql += ", ";
+    sql += parseBool(h);
+    sql += ", ";
+    sql += parseBool(i);
+    sql += ", ";
+    sql += parseBool(j);
+    sql += ", ";
+    sql += parseBool(k);
+    sql += ", ";
+    sql += parseBool(l);
+    sql += ", ";
+    sql += parseBool(m);
+    sql += ", ";
+    sql += parseBool(n);
+    sql += ", '";
+    sql += fyxxx;
+    sql += "','";
+    sql += yzum;
+    sql += "','";
+    sql += lxdh;
+    sql += "','";
+    sql += lxsj;
+    sql += "','";
+    sql += yzsm;
+    sql += "')";
+    //qDebug() << sql ;
+    return query.exec(sql);
+
+}
+
+void DBConnect::getQiugouKehu(int bianhao, QString *dqzt, QString *zygw, QString *fwly, QString *szcq, int *fwjg, QString *fwlx, QString *cq, float *fwmj, QString *xjcd, int *szlc, QString *zxbz, int *lczs, QString *jtdz, bool *a, bool *b, bool *c, bool *d, bool *e, bool *f, bool *g, bool *h, bool *i, bool *j, bool *k, bool *l, bool *m, bool *n, QString *fyxxx, QString *yzum, QString *lxdh, QString *lxsj, QString *yzsm)
+{
+    QSqlQuery query;
+    QString bianhaostr;
+    bianhaostr.setNum(bianhao);
+    query.exec("select * from qiugoukehu where kehubianhao = " + bianhaostr);
+    query.next();
+    *dqzt = query.value(1).toString();
+    *zygw = query.value(2).toString();
+    *fwly = query.value(3).toString();
+    *szcq = query.value(4).toString();
+    *fwjg = query.value(5).toInt();
+    *fwlx = query.value(6).toString();
+    *cq = query.value(7).toString();
+    *fwmj = query.value(8).toFloat();
+    * xjcd = query.value( 9).toString();
+    * szlc = query.value( 10).toInt();
+    * zxbz = query.value( 11).toString();
+    * lczs = query.value(12 ).toInt();
+    * jtdz = query.value(13 ).toString();
+    * a = query.value(14 ).toBool();
+    * b = query.value(15 ).toBool();
+    * c = query.value( 16).toBool();
+    *d  = query.value( 17).toBool();
+    *e = query.value( 18).toBool();
+    *f = query.value(19 ).toBool();
+    *g = query.value(20 ).toBool();
+    *h = query.value( 21).toBool();
+    * i = query.value( 22).toBool();
+    *j  = query.value( 23).toBool();
+    * k = query.value( 24).toBool();
+    * l = query.value( 25).toBool();
+    *m  = query.value( 26).toBool();
+    *n = query.value( 27).toBool();
+    * fyxxx = query.value(28 ).toString();
+    * yzum = query.value( 29).toString();
+    * lxdh = query.value( 30).toString();
+    * lxsj = query.value( 31).toString();
+    * yzsm = query.value( 32).toString();
+
+}
+void DBConnect::getQiuzuKehu(int bianhao, QString *dqzt, QString *zygw, QString *fwly, QString *szcq, int *fwjg, QString *fwlx, QString *cq, float *fwmj, QString *xjcd, int *szlc, QString *zxbz, int *lczs, QString *jtdz, bool *a, bool *b, bool *c, bool *d, bool *e, bool *f, bool *g, bool *h, bool *i, bool *j, bool *k, bool *l, bool *m, bool *n, QString *fyxxx, QString *yzum, QString *lxdh, QString *lxsj, QString *yzsm)
+{
+    QSqlQuery query;
+    QString bianhaostr;
+    bianhaostr.setNum(bianhao);
+    query.exec("select * from qiuzukehu where kehubianhao = " + bianhaostr);
+    query.next();
+    *dqzt = query.value(1).toString();
+    *zygw = query.value(2).toString();
+    *fwly = query.value(3).toString();
+    *szcq = query.value(4).toString();
+    *fwjg = query.value(5).toInt();
+    *fwlx = query.value(6).toString();
+    *cq = query.value(7).toString();
+    *fwmj = query.value(8).toFloat();
+    * xjcd = query.value( 9).toString();
+    * szlc = query.value( 10).toInt();
+    * zxbz = query.value( 11).toString();
+    * lczs = query.value(12 ).toInt();
+    * jtdz = query.value(13 ).toString();
+    * a = query.value(14 ).toBool();
+    * b = query.value(15 ).toBool();
+    * c = query.value( 16).toBool();
+    *d  = query.value( 17).toBool();
+    *e = query.value( 18).toBool();
+    *f = query.value(19 ).toBool();
+    *g = query.value(20 ).toBool();
+    *h = query.value( 21).toBool();
+    * i = query.value( 22).toBool();
+    *j  = query.value( 23).toBool();
+    * k = query.value( 24).toBool();
+    * l = query.value( 25).toBool();
+    *m  = query.value( 26).toBool();
+    *n = query.value( 27).toBool();
+    * fyxxx = query.value(28 ).toString();
+    * yzum = query.value( 29).toString();
+    * lxdh = query.value( 30).toString();
+    * lxsj = query.value( 31).toString();
+    * yzsm = query.value( 32).toString();
+
+}
+void DBConnect::getHezuKehu(int bianhao, QString *dqzt, QString *zygw, QString *fwly, QString *szcq, int *fwjg, QString *fwlx, QString *cq, float *fwmj, QString *xjcd, int *szlc, QString *zxbz, int *lczs, QString *jtdz, bool *a, bool *b, bool *c, bool *d, bool *e, bool *f, bool *g, bool *h, bool *i, bool *j, bool *k, bool *l, bool *m, bool *n, QString *fyxxx, QString *yzum, QString *lxdh, QString *lxsj, QString *yzsm)
+{
+    QSqlQuery query;
+    QString bianhaostr;
+    bianhaostr.setNum(bianhao);
+    query.exec("select * from hezukehu where kehubianhao = " + bianhaostr);
+    query.next();
+    *dqzt = query.value(1).toString();
+    *zygw = query.value(2).toString();
+    *fwly = query.value(3).toString();
+    *szcq = query.value(4).toString();
+    *fwjg = query.value(5).toInt();
+    *fwlx = query.value(6).toString();
+    *cq = query.value(7).toString();
+    *fwmj = query.value(8).toFloat();
+    * xjcd = query.value( 9).toString();
+    * szlc = query.value( 10).toInt();
+    * zxbz = query.value( 11).toString();
+    * lczs = query.value(12 ).toInt();
+    * jtdz = query.value(13 ).toString();
+    * a = query.value(14 ).toBool();
+    * b = query.value(15 ).toBool();
+    * c = query.value( 16).toBool();
+    *d  = query.value( 17).toBool();
+    *e = query.value( 18).toBool();
+    *f = query.value(19 ).toBool();
+    *g = query.value(20 ).toBool();
+    *h = query.value( 21).toBool();
+    * i = query.value( 22).toBool();
+    *j  = query.value( 23).toBool();
+    * k = query.value( 24).toBool();
+    * l = query.value( 25).toBool();
+    *m  = query.value( 26).toBool();
+    *n = query.value( 27).toBool();
+    * fyxxx = query.value(28 ).toString();
+    * yzum = query.value( 29).toString();
+    * lxdh = query.value( 30).toString();
+    * lxsj = query.value( 31).toString();
+    * yzsm = query.value( 32).toString();
+
 }

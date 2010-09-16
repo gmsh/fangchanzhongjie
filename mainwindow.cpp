@@ -199,6 +199,9 @@ MainWindow::MainWindow(DBConnect *dbcon)
     this->tableView_0->setModel(dbcon->chushoufangyuan);
     this->tableView_1->setModel(dbcon->chuzufangyuan);
     this->tableView_2->setModel(dbcon->hezufangyuan);
+    this->tableView_3->setModel(dbcon->qiugoukehu);
+    this->tableView_4->setModel(dbcon->qiuzukehu);
+    this->tableView_5->setModel(dbcon->hezukehu);
 
     this->tableView_0->setColumnHidden(5,true);
     this->tableView_0->setColumnHidden(8,true);
@@ -272,9 +275,84 @@ MainWindow::MainWindow(DBConnect *dbcon)
     this->tableView_2->setColumnHidden(30,true);
     this->tableView_2->setColumnHidden(31,true);
     this->tableView_2->setColumnHidden(32,true);
+    this->tableView_3->setColumnHidden(5,true);
+    this->tableView_3->setColumnHidden(8,true);
+    this->tableView_3->setColumnHidden(10,true);
+    this->tableView_3->setColumnHidden(12,true);
+    this->tableView_3->setColumnHidden(13,true);
+    this->tableView_3->setColumnHidden(14,true);
+    this->tableView_3->setColumnHidden(15,true);
+    this->tableView_3->setColumnHidden(16,true);
+    this->tableView_3->setColumnHidden(17,true);
+    this->tableView_3->setColumnHidden(18,true);
+    this->tableView_3->setColumnHidden(19,true);
+    this->tableView_3->setColumnHidden(20,true);
+    this->tableView_3->setColumnHidden(21,true);
+    this->tableView_3->setColumnHidden(22,true);
+    this->tableView_3->setColumnHidden(23,true);
+    this->tableView_3->setColumnHidden(24,true);
+    this->tableView_3->setColumnHidden(25,true);
+    this->tableView_3->setColumnHidden(26,true);
+    this->tableView_3->setColumnHidden(27,true);
+    this->tableView_3->setColumnHidden(28,true);
+    this->tableView_3->setColumnHidden(29,true);
+    this->tableView_3->setColumnHidden(30,true);
+    this->tableView_3->setColumnHidden(31,true);
+    this->tableView_3->setColumnHidden(32,true);
+    this->tableView_4->setColumnHidden(5,true);
+    this->tableView_4->setColumnHidden(8,true);
+    this->tableView_4->setColumnHidden(10,true);
+    this->tableView_4->setColumnHidden(12,true);
+    this->tableView_4->setColumnHidden(13,true);
+    this->tableView_4->setColumnHidden(14,true);
+    this->tableView_4->setColumnHidden(15,true);
+    this->tableView_4->setColumnHidden(16,true);
+    this->tableView_4->setColumnHidden(17,true);
+    this->tableView_4->setColumnHidden(18,true);
+    this->tableView_4->setColumnHidden(19,true);
+    this->tableView_4->setColumnHidden(20,true);
+    this->tableView_4->setColumnHidden(21,true);
+    this->tableView_4->setColumnHidden(22,true);
+    this->tableView_4->setColumnHidden(23,true);
+    this->tableView_4->setColumnHidden(24,true);
+    this->tableView_4->setColumnHidden(25,true);
+    this->tableView_4->setColumnHidden(26,true);
+    this->tableView_4->setColumnHidden(27,true);
+    this->tableView_4->setColumnHidden(28,true);
+    this->tableView_4->setColumnHidden(29,true);
+    this->tableView_4->setColumnHidden(30,true);
+    this->tableView_4->setColumnHidden(31,true);
+    this->tableView_4->setColumnHidden(32,true);
+    this->tableView_5->setColumnHidden(5,true);
+    this->tableView_5->setColumnHidden(8,true);
+    this->tableView_5->setColumnHidden(10,true);
+    this->tableView_5->setColumnHidden(12,true);
+    this->tableView_5->setColumnHidden(13,true);
+    this->tableView_5->setColumnHidden(14,true);
+    this->tableView_5->setColumnHidden(15,true);
+    this->tableView_5->setColumnHidden(16,true);
+    this->tableView_5->setColumnHidden(17,true);
+    this->tableView_5->setColumnHidden(18,true);
+    this->tableView_5->setColumnHidden(19,true);
+    this->tableView_5->setColumnHidden(20,true);
+    this->tableView_5->setColumnHidden(21,true);
+    this->tableView_5->setColumnHidden(22,true);
+    this->tableView_5->setColumnHidden(23,true);
+    this->tableView_5->setColumnHidden(24,true);
+    this->tableView_5->setColumnHidden(25,true);
+    this->tableView_5->setColumnHidden(26,true);
+    this->tableView_5->setColumnHidden(27,true);
+    this->tableView_5->setColumnHidden(28,true);
+    this->tableView_5->setColumnHidden(29,true);
+    this->tableView_5->setColumnHidden(30,true);
+    this->tableView_5->setColumnHidden(31,true);
+    this->tableView_5->setColumnHidden(32,true);
     this->tableView_0->resizeColumnsToContents();
     this->tableView_1->resizeColumnsToContents();
     this->tableView_2->resizeColumnsToContents();
+    this->tableView_3->resizeColumnsToContents();
+    this->tableView_4->resizeColumnsToContents();
+    this->tableView_5->resizeColumnsToContents();
 
     this->tableView_0->setSelectionMode(QTableView::SingleSelection);
     this->tableView_0->setSelectionBehavior(QTableView::SelectRows);
@@ -285,6 +363,15 @@ MainWindow::MainWindow(DBConnect *dbcon)
     this->tableView_2->setSelectionMode(QTableView::SingleSelection);
     this->tableView_2->setSelectionBehavior(QTableView::SelectRows);
     this->tableView_2->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    this->tableView_3->setSelectionMode(QTableView::SingleSelection);
+    this->tableView_3->setSelectionBehavior(QTableView::SelectRows);
+    this->tableView_3->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    this->tableView_4->setSelectionMode(QTableView::SingleSelection);
+    this->tableView_4->setSelectionBehavior(QTableView::SelectRows);
+    this->tableView_4->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    this->tableView_5->setSelectionMode(QTableView::SingleSelection);
+    this->tableView_5->setSelectionBehavior(QTableView::SelectRows);
+    this->tableView_5->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
 
 
@@ -300,9 +387,21 @@ MainWindow::MainWindow(DBConnect *dbcon)
     connect(this->modifyPushButton_1, SIGNAL(clicked()), this, SLOT(on_modifyPushButton_0_triggerd()));
     connect(this->modifyPushButton_2, SIGNAL(clicked()), this, SLOT(on_modifyPushButton_0_triggerd()));
 
+    connect(this->modifyPushButton_3, SIGNAL(clicked()), this, SLOT(on_modifyPushButton_3_triggerd()));
+    connect(this->modifyPushButton_4, SIGNAL(clicked()), this, SLOT(on_modifyPushButton_3_triggerd()));
+    connect(this->modifyPushButton_5, SIGNAL(clicked()), this, SLOT(on_modifyPushButton_3_triggerd()));
+
     connect(this->deletePushButton_0, SIGNAL(clicked()), this,  SLOT(on_deletePushButton_0_triggerd()));
     connect(this->deletePushButton_1, SIGNAL(clicked()), this,  SLOT(on_deletePushButton_0_triggerd()));
     connect(this->deletePushButton_2, SIGNAL(clicked()), this,  SLOT(on_deletePushButton_0_triggerd()));
+
+    connect(this->deletePushButton_3, SIGNAL(clicked()), this,  SLOT(on_deletePushButton_3_triggerd()));
+    connect(this->deletePushButton_4, SIGNAL(clicked()), this,  SLOT(on_deletePushButton_3_triggerd()));
+    connect(this->deletePushButton_5, SIGNAL(clicked()), this,  SLOT(on_deletePushButton_3_triggerd()));
+
+    connect(this->addPushButton_3, SIGNAL(clicked()), this, SLOT(on_actionTianjiaKehu_triggered()));
+    connect(this->addPushButton_4, SIGNAL(clicked()), this, SLOT(on_actionTianjiaKehu_triggered()));
+    connect(this->addPushButton_5, SIGNAL(clicked()), this, SLOT(on_actionTianjiaKehu_triggered()));
     //
     //    connect(this->tableView_1, SIGNAL(clicked(QModelIndex)), this, SLOT(on_tableView_0_clicked()));
     //    connect(this->tableView_1, SIGNAL(clicked(QModelIndex)), this, SLOT(on_tableView_0_clicked()));
@@ -380,6 +479,7 @@ void MainWindow::on_stackedWidget_currentChanged(int index)
 void MainWindow::on_actionTianjiaFangyuan_triggered()
 {
     FangyuanDialog fangyuanDialog(this, this->dbcon);
+    switches:
     switch(this->stackedWidget->currentIndex()){
     case 0:
         fangyuanDialog.fangyuanLeixingComboBox->setCurrentIndex(0);
@@ -503,6 +603,10 @@ void MainWindow::on_actionTianjiaFangyuan_triggered()
                                       fangyuanDialog.yezhuShuomingLineEdit->text());
         }
         this->dbcon->hezufangyuan->select();
+        break;
+        default:
+        this->stackedWidget->setCurrentIndex(0);
+        goto switches;
         break;
     }
 
@@ -840,6 +944,336 @@ void MainWindow::on_modifyPushButton_0_triggerd()
     }
 }
 
+void MainWindow::on_modifyPushButton_3_triggerd()
+{
+    int kehubianhao, fangwujiage, suozailouceng, loucengzongshu;
+    QString xinjiuchengdu, dangqianzhuangtai, zhiyeguwen, kehulaiyuan, suozaichengqu, fangwuleixing, chanquanxingbie,zhuangxiubiaozhun, yixiangdizhi, fangyuanxiangxixinxi, yezhuxingming, lianxidianghua, lianxishouji, yezhushuoming;
+    bool a, b, c, d, e, f, g, h, i, j, k, l, m, n;
+    float fangwumianji;
+    KeyuanDialog keyuanDialog(this, this->dbcon);
+    QComboBox * combo;
+    switch(this->stackedWidget->currentIndex()){
+    case 3:
+        keyuanDialog.kehuXuqiuComboBox->setCurrentIndex(0);
+        keyuanDialog.asQiugouQiuzu();
+        this->tableView_3->selectRow(this->tableView_3->currentIndex().row());
+        kehubianhao = this->tableView_3->currentIndex().data().toInt();
+        this->dbcon->getQiugouKehu(kehubianhao, &dangqianzhuangtai, &zhiyeguwen, &kehulaiyuan, &suozaichengqu,&fangwujiage, &fangwuleixing, &chanquanxingbie, &fangwumianji, & xinjiuchengdu, &suozailouceng, &zhuangxiubiaozhun, &loucengzongshu, &yixiangdizhi,
+                                   &a, &b, &c, &d, &e, &f, &g, &h, &i, &j, &k, &l, &m, &n, &fangyuanxiangxixinxi,&yezhuxingming, &lianxidianghua, &lianxishouji, & yezhushuoming);
+        keyuanDialog.kehuBianhaoSpinBox->setValue(kehubianhao);
+        keyuanDialog.kehuBianhaoSpinBox->setEnabled(false);
+        keyuanDialog.kehuXuqiuComboBox->setEnabled(false);
+        combo = keyuanDialog.dangqianZhuangtaiComboBox;
+        combo ->setCurrentIndex(combo->findText(dangqianzhuangtai));
+        combo = keyuanDialog.zhiyeGuwenComboBox;
+        combo ->setCurrentIndex(combo->findText(zhiyeguwen));
+        combo = keyuanDialog.kehuLaiyuanComboBox;
+        combo ->setCurrentIndex(combo->findText(kehulaiyuan));
+        combo = keyuanDialog.suozaiChengquComboBox;
+        combo ->setCurrentIndex(combo->findText(suozaichengqu));
+        combo = keyuanDialog.fangwuLeixingComboBox;
+        combo ->setCurrentIndex(combo->findText(fangwuleixing));
+        combo = keyuanDialog.chanquanXingbieComboBox;
+        combo ->setCurrentIndex(combo->findText(chanquanxingbie));
+        combo = keyuanDialog.zhuangxiuBiaozhunComboBox;
+        combo ->setCurrentIndex(combo->findText(zhuangxiubiaozhun));
+        combo = keyuanDialog.xinjiuChengduComboBox;
+        combo ->setCurrentIndex(combo->findText(xinjiuchengdu));
+
+        keyuanDialog.fangwuJiageSpinBox->setValue(fangwujiage);
+        keyuanDialog.fangwuMianjiDoubleSpinBox->setValue(fangwumianji);
+        //keyuanDialog.jianchengNiandaiSpinBox->setValue(xinjiuchengdu);
+        keyuanDialog.suozaiLoucengSpinBox->setValue(suozailouceng);
+        keyuanDialog.loucengZongshuSpinBox->setValue(loucengzongshu);
+        keyuanDialog.yixiangDizhiLineEdit->setText(yixiangdizhi);
+
+        if(a)
+            keyuanDialog.chufangCheckBox->setCheckState(Qt::Checked);
+        if(b)
+            keyuanDialog.chuangCheckBox->setCheckState(Qt::Checked);
+        if(c)
+            keyuanDialog.jiajuCheckBox->setCheckState(Qt::Checked);
+        if(d)
+            keyuanDialog.youxianDianshiCheckBox->setCheckState(Qt::Checked);
+        if(e)
+            keyuanDialog.kuaidaiwangCheckBox->setCheckState(Qt::Checked);
+        if(f)
+            keyuanDialog.dianhuaCheckBox->setCheckState(Qt::Checked);
+        if(g)
+            keyuanDialog.reshuiqiCheckBox->setCheckState(Qt::Checked);
+        if(h)
+            keyuanDialog.dianshijiCheckBox->setCheckState(Qt::Checked);
+        if(i)
+            keyuanDialog.kongtiaoCheckBox->setCheckState(Qt::Checked);
+        if(j)
+            keyuanDialog.xiyijiCheckBox->setCheckState(Qt::Checked);
+        if(k)
+            keyuanDialog.bingxiangCheckBox->setCheckState(Qt::Checked);
+        if(l)
+            keyuanDialog.meiqiCheckBox->setCheckState(Qt::Checked);
+        if(m)
+            keyuanDialog.nuanqiCheckBox->setCheckState(Qt::Checked);
+        if(n)
+            keyuanDialog.qichekuCheckBox->setCheckState(Qt::Checked);
+
+        keyuanDialog.fangyuanXiangxiXinxiPlainTextEdit->setPlainText(fangyuanxiangxixinxi);
+        keyuanDialog.yezhuXingmingLineEdit->setText(yezhuxingming);
+        keyuanDialog.lianxiDianhuaLineEdit->setText(lianxidianghua);
+        keyuanDialog.lianxiShoujiLineEdit->setText(lianxishouji);
+        keyuanDialog.yezhuShuomingLineEdit->setText(yezhushuoming);
+        if(keyuanDialog.exec() == QDialog::Accepted){
+            dbcon->insertQiugoukehu(keyuanDialog.kehuBianhaoSpinBox->text().toInt(),
+                                    keyuanDialog.dangqianZhuangtaiComboBox->currentText(),
+                                    keyuanDialog.zhiyeGuwenComboBox->currentText(),
+                                    keyuanDialog.kehuLaiyuanComboBox->currentText(),
+                                    keyuanDialog.suozaiChengquComboBox->currentText(),
+                                    keyuanDialog.fangwuJiageSpinBox->text().toInt(),
+                                    keyuanDialog.fangwuLeixingComboBox->currentText(),
+                                    keyuanDialog.chanquanXingbieComboBox->currentText(),
+                                    keyuanDialog.fangwuMianjiDoubleSpinBox->text().toFloat(),
+                                    keyuanDialog.xinjiuChengduComboBox->currentText(),
+                                    keyuanDialog.suozaiLoucengSpinBox->text().toInt(),
+                                    keyuanDialog.zhuangxiuBiaozhunComboBox->currentText(),
+                                    keyuanDialog.loucengZongshuSpinBox->text().toInt(),
+                                    keyuanDialog.yixiangDizhiLineEdit->text(),
+                                    keyuanDialog.chufangCheckBox->isChecked(),
+                                    keyuanDialog.chuangCheckBox->isChecked(),
+                                    keyuanDialog.jiajuCheckBox->isChecked(),
+                                    keyuanDialog.youxianDianshiCheckBox->isChecked(),
+                                    keyuanDialog.kuaidaiwangCheckBox->isChecked(),
+                                    keyuanDialog.dianhuaCheckBox->isChecked(),
+                                    keyuanDialog.reshuiqiCheckBox->isChecked(),
+                                    keyuanDialog.dianshijiCheckBox->isChecked(),
+                                    keyuanDialog.kongtiaoCheckBox->isChecked(),
+                                    keyuanDialog.xiyijiCheckBox->isChecked(),
+                                    keyuanDialog.bingxiangCheckBox->isChecked(),
+                                    keyuanDialog.meiqiCheckBox->isChecked(),
+                                    keyuanDialog.nuanqiCheckBox->isChecked(),
+                                    keyuanDialog.qichekuCheckBox->isChecked(),
+                                    keyuanDialog.fangyuanXiangxiXinxiPlainTextEdit->toPlainText(),
+                                    keyuanDialog.yezhuXingmingLineEdit->text(),
+                                    keyuanDialog.lianxiDianhuaLineEdit->text(),
+                                    keyuanDialog.lianxiShoujiLineEdit->text(),
+                                    keyuanDialog.yezhuShuomingLineEdit->text());
+        }
+        this->dbcon->qiugoukehu->select();
+
+        break;
+    case 4:
+        keyuanDialog.kehuXuqiuComboBox->setCurrentIndex(0);
+        keyuanDialog.asQiugouQiuzu();
+        this->tableView_3->selectRow(this->tableView_3->currentIndex().row());
+        kehubianhao = this->tableView_3->currentIndex().data().toInt();
+        this->dbcon->getQiuzuKehu(kehubianhao, &dangqianzhuangtai, &zhiyeguwen, &kehulaiyuan, &suozaichengqu,&fangwujiage, &fangwuleixing, &chanquanxingbie, &fangwumianji, & xinjiuchengdu, &suozailouceng, &zhuangxiubiaozhun, &loucengzongshu, &yixiangdizhi,
+                                  &a, &b, &c, &d, &e, &f, &g, &h, &i, &j, &k, &l, &m, &n, &fangyuanxiangxixinxi,&yezhuxingming, &lianxidianghua, &lianxishouji, & yezhushuoming);
+        keyuanDialog.kehuBianhaoSpinBox->setValue(kehubianhao);
+        keyuanDialog.kehuBianhaoSpinBox->setEnabled(false);
+        keyuanDialog.kehuXuqiuComboBox->setEnabled(false);
+        combo = keyuanDialog.dangqianZhuangtaiComboBox;
+        combo ->setCurrentIndex(combo->findText(dangqianzhuangtai));
+        combo = keyuanDialog.zhiyeGuwenComboBox;
+        combo ->setCurrentIndex(combo->findText(zhiyeguwen));
+        combo = keyuanDialog.kehuLaiyuanComboBox;
+        combo ->setCurrentIndex(combo->findText(kehulaiyuan));
+        combo = keyuanDialog.suozaiChengquComboBox;
+        combo ->setCurrentIndex(combo->findText(suozaichengqu));
+        combo = keyuanDialog.fangwuLeixingComboBox;
+        combo ->setCurrentIndex(combo->findText(fangwuleixing));
+        combo = keyuanDialog.chanquanXingbieComboBox;
+        combo ->setCurrentIndex(combo->findText(chanquanxingbie));
+        combo = keyuanDialog.zhuangxiuBiaozhunComboBox;
+        combo ->setCurrentIndex(combo->findText(zhuangxiubiaozhun));
+        combo = keyuanDialog.xinjiuChengduComboBox;
+        combo ->setCurrentIndex(combo->findText(xinjiuchengdu));
+
+        keyuanDialog.fangwuJiageSpinBox->setValue(fangwujiage);
+        keyuanDialog.fangwuMianjiDoubleSpinBox->setValue(fangwumianji);
+        //keyuanDialog.jianchengNiandaiSpinBox->setValue(xinjiuchengdu);
+        keyuanDialog.suozaiLoucengSpinBox->setValue(suozailouceng);
+        keyuanDialog.loucengZongshuSpinBox->setValue(loucengzongshu);
+        keyuanDialog.yixiangDizhiLineEdit->setText(yixiangdizhi);
+
+        if(a)
+            keyuanDialog.chufangCheckBox->setCheckState(Qt::Checked);
+        if(b)
+            keyuanDialog.chuangCheckBox->setCheckState(Qt::Checked);
+        if(c)
+            keyuanDialog.jiajuCheckBox->setCheckState(Qt::Checked);
+        if(d)
+            keyuanDialog.youxianDianshiCheckBox->setCheckState(Qt::Checked);
+        if(e)
+            keyuanDialog.kuaidaiwangCheckBox->setCheckState(Qt::Checked);
+        if(f)
+            keyuanDialog.dianhuaCheckBox->setCheckState(Qt::Checked);
+        if(g)
+            keyuanDialog.reshuiqiCheckBox->setCheckState(Qt::Checked);
+        if(h)
+            keyuanDialog.dianshijiCheckBox->setCheckState(Qt::Checked);
+        if(i)
+            keyuanDialog.kongtiaoCheckBox->setCheckState(Qt::Checked);
+        if(j)
+            keyuanDialog.xiyijiCheckBox->setCheckState(Qt::Checked);
+        if(k)
+            keyuanDialog.bingxiangCheckBox->setCheckState(Qt::Checked);
+        if(l)
+            keyuanDialog.meiqiCheckBox->setCheckState(Qt::Checked);
+        if(m)
+            keyuanDialog.nuanqiCheckBox->setCheckState(Qt::Checked);
+        if(n)
+            keyuanDialog.qichekuCheckBox->setCheckState(Qt::Checked);
+
+        keyuanDialog.fangyuanXiangxiXinxiPlainTextEdit->setPlainText(fangyuanxiangxixinxi);
+        keyuanDialog.yezhuXingmingLineEdit->setText(yezhuxingming);
+        keyuanDialog.lianxiDianhuaLineEdit->setText(lianxidianghua);
+        keyuanDialog.lianxiShoujiLineEdit->setText(lianxishouji);
+        keyuanDialog.yezhuShuomingLineEdit->setText(yezhushuoming);
+        if(keyuanDialog.exec() == QDialog::Accepted){
+            dbcon->insertQiuzukehu(keyuanDialog.kehuBianhaoSpinBox->text().toInt(),
+                                   keyuanDialog.dangqianZhuangtaiComboBox->currentText(),
+                                   keyuanDialog.zhiyeGuwenComboBox->currentText(),
+                                   keyuanDialog.kehuLaiyuanComboBox->currentText(),
+                                   keyuanDialog.suozaiChengquComboBox->currentText(),
+                                   keyuanDialog.fangwuJiageSpinBox->text().toInt(),
+                                   keyuanDialog.fangwuLeixingComboBox->currentText(),
+                                   keyuanDialog.chanquanXingbieComboBox->currentText(),
+                                   keyuanDialog.fangwuMianjiDoubleSpinBox->text().toFloat(),
+                                   keyuanDialog.xinjiuChengduComboBox->currentText(),
+                                   keyuanDialog.suozaiLoucengSpinBox->text().toInt(),
+                                   keyuanDialog.zhuangxiuBiaozhunComboBox->currentText(),
+                                   keyuanDialog.loucengZongshuSpinBox->text().toInt(),
+                                   keyuanDialog.yixiangDizhiLineEdit->text(),
+                                   keyuanDialog.chufangCheckBox->isChecked(),
+                                   keyuanDialog.chuangCheckBox->isChecked(),
+                                   keyuanDialog.jiajuCheckBox->isChecked(),
+                                   keyuanDialog.youxianDianshiCheckBox->isChecked(),
+                                   keyuanDialog.kuaidaiwangCheckBox->isChecked(),
+                                   keyuanDialog.dianhuaCheckBox->isChecked(),
+                                   keyuanDialog.reshuiqiCheckBox->isChecked(),
+                                   keyuanDialog.dianshijiCheckBox->isChecked(),
+                                   keyuanDialog.kongtiaoCheckBox->isChecked(),
+                                   keyuanDialog.xiyijiCheckBox->isChecked(),
+                                   keyuanDialog.bingxiangCheckBox->isChecked(),
+                                   keyuanDialog.meiqiCheckBox->isChecked(),
+                                   keyuanDialog.nuanqiCheckBox->isChecked(),
+                                   keyuanDialog.qichekuCheckBox->isChecked(),
+                                   keyuanDialog.fangyuanXiangxiXinxiPlainTextEdit->toPlainText(),
+                                   keyuanDialog.yezhuXingmingLineEdit->text(),
+                                   keyuanDialog.lianxiDianhuaLineEdit->text(),
+                                   keyuanDialog.lianxiShoujiLineEdit->text(),
+                                   keyuanDialog.yezhuShuomingLineEdit->text());
+        }
+        this->dbcon->qiuzukehu->select();
+
+        break;
+    case 5:
+        keyuanDialog.kehuXuqiuComboBox->setCurrentIndex(0);
+        keyuanDialog.asHezu();
+        this->tableView_3->selectRow(this->tableView_3->currentIndex().row());
+        kehubianhao = this->tableView_3->currentIndex().data().toInt();
+        this->dbcon->getHezuKehu(kehubianhao, &dangqianzhuangtai, &zhiyeguwen, &kehulaiyuan, &suozaichengqu,&fangwujiage, &fangwuleixing, &chanquanxingbie, &fangwumianji, & xinjiuchengdu, &suozailouceng, &zhuangxiubiaozhun, &loucengzongshu, &yixiangdizhi,
+                                 &a, &b, &c, &d, &e, &f, &g, &h, &i, &j, &k, &l, &m, &n, &fangyuanxiangxixinxi,&yezhuxingming, &lianxidianghua, &lianxishouji, & yezhushuoming);
+        keyuanDialog.kehuBianhaoSpinBox->setValue(kehubianhao);
+        keyuanDialog.kehuBianhaoSpinBox->setEnabled(false);
+        keyuanDialog.kehuXuqiuComboBox->setEnabled(false);
+        combo = keyuanDialog.dangqianZhuangtaiComboBox;
+        combo ->setCurrentIndex(combo->findText(dangqianzhuangtai));
+        combo = keyuanDialog.zhiyeGuwenComboBox;
+        combo ->setCurrentIndex(combo->findText(zhiyeguwen));
+        combo = keyuanDialog.kehuLaiyuanComboBox;
+        combo ->setCurrentIndex(combo->findText(kehulaiyuan));
+        combo = keyuanDialog.suozaiChengquComboBox;
+        combo ->setCurrentIndex(combo->findText(suozaichengqu));
+        combo = keyuanDialog.fangwuLeixingComboBox;
+        combo ->setCurrentIndex(combo->findText(fangwuleixing));
+        combo = keyuanDialog.chanquanXingbieComboBox;
+        combo ->setCurrentIndex(combo->findText(chanquanxingbie));
+        combo = keyuanDialog.zhuangxiuBiaozhunComboBox;
+        combo ->setCurrentIndex(combo->findText(zhuangxiubiaozhun));
+        combo = keyuanDialog.xinjiuChengduComboBox;
+        combo ->setCurrentIndex(combo->findText(xinjiuchengdu));
+
+        keyuanDialog.fangwuJiageSpinBox->setValue(fangwujiage);
+        keyuanDialog.fangwuMianjiDoubleSpinBox->setValue(fangwumianji);
+        //keyuanDialog.jianchengNiandaiSpinBox->setValue(xinjiuchengdu);
+        keyuanDialog.suozaiLoucengSpinBox->setValue(suozailouceng);
+        keyuanDialog.loucengZongshuSpinBox->setValue(loucengzongshu);
+        keyuanDialog.yixiangDizhiLineEdit->setText(yixiangdizhi);
+
+        if(a)
+            keyuanDialog.chufangCheckBox->setCheckState(Qt::Checked);
+        if(b)
+            keyuanDialog.chuangCheckBox->setCheckState(Qt::Checked);
+        if(c)
+            keyuanDialog.jiajuCheckBox->setCheckState(Qt::Checked);
+        if(d)
+            keyuanDialog.youxianDianshiCheckBox->setCheckState(Qt::Checked);
+        if(e)
+            keyuanDialog.kuaidaiwangCheckBox->setCheckState(Qt::Checked);
+        if(f)
+            keyuanDialog.dianhuaCheckBox->setCheckState(Qt::Checked);
+        if(g)
+            keyuanDialog.reshuiqiCheckBox->setCheckState(Qt::Checked);
+        if(h)
+            keyuanDialog.dianshijiCheckBox->setCheckState(Qt::Checked);
+        if(i)
+            keyuanDialog.kongtiaoCheckBox->setCheckState(Qt::Checked);
+        if(j)
+            keyuanDialog.xiyijiCheckBox->setCheckState(Qt::Checked);
+        if(k)
+            keyuanDialog.bingxiangCheckBox->setCheckState(Qt::Checked);
+        if(l)
+            keyuanDialog.meiqiCheckBox->setCheckState(Qt::Checked);
+        if(m)
+            keyuanDialog.nuanqiCheckBox->setCheckState(Qt::Checked);
+        if(n)
+            keyuanDialog.qichekuCheckBox->setCheckState(Qt::Checked);
+
+        keyuanDialog.fangyuanXiangxiXinxiPlainTextEdit->setPlainText(fangyuanxiangxixinxi);
+        keyuanDialog.yezhuXingmingLineEdit->setText(yezhuxingming);
+        keyuanDialog.lianxiDianhuaLineEdit->setText(lianxidianghua);
+        keyuanDialog.lianxiShoujiLineEdit->setText(lianxishouji);
+        keyuanDialog.yezhuShuomingLineEdit->setText(yezhushuoming);
+        if(keyuanDialog.exec() == QDialog::Accepted){
+            dbcon->insertHezukehu(keyuanDialog.kehuBianhaoSpinBox->text().toInt(),
+                                  keyuanDialog.dangqianZhuangtaiComboBox->currentText(),
+                                  keyuanDialog.zhiyeGuwenComboBox->currentText(),
+                                  keyuanDialog.kehuLaiyuanComboBox->currentText(),
+                                  keyuanDialog.suozaiChengquComboBox->currentText(),
+                                  keyuanDialog.fangwuJiageSpinBox->text().toInt(),
+                                  keyuanDialog.fangwuLeixingComboBox->currentText(),
+                                  keyuanDialog.chanquanXingbieComboBox->currentText(),
+                                  keyuanDialog.fangwuMianjiDoubleSpinBox->text().toFloat(),
+                                  keyuanDialog.xinjiuChengduComboBox->currentText(),
+                                  keyuanDialog.suozaiLoucengSpinBox->text().toInt(),
+                                  keyuanDialog.zhuangxiuBiaozhunComboBox->currentText(),
+                                  keyuanDialog.loucengZongshuSpinBox->text().toInt(),
+                                  keyuanDialog.yixiangDizhiLineEdit->text(),
+                                  keyuanDialog.chufangCheckBox->isChecked(),
+                                  keyuanDialog.chuangCheckBox->isChecked(),
+                                  keyuanDialog.jiajuCheckBox->isChecked(),
+                                  keyuanDialog.youxianDianshiCheckBox->isChecked(),
+                                  keyuanDialog.kuaidaiwangCheckBox->isChecked(),
+                                  keyuanDialog.dianhuaCheckBox->isChecked(),
+                                  keyuanDialog.reshuiqiCheckBox->isChecked(),
+                                  keyuanDialog.dianshijiCheckBox->isChecked(),
+                                  keyuanDialog.kongtiaoCheckBox->isChecked(),
+                                  keyuanDialog.xiyijiCheckBox->isChecked(),
+                                  keyuanDialog.bingxiangCheckBox->isChecked(),
+                                  keyuanDialog.meiqiCheckBox->isChecked(),
+                                  keyuanDialog.nuanqiCheckBox->isChecked(),
+                                  keyuanDialog.qichekuCheckBox->isChecked(),
+                                  keyuanDialog.fangyuanXiangxiXinxiPlainTextEdit->toPlainText(),
+                                  keyuanDialog.yezhuXingmingLineEdit->text(),
+                                  keyuanDialog.lianxiDianhuaLineEdit->text(),
+                                  keyuanDialog.lianxiShoujiLineEdit->text(),
+                                  keyuanDialog.yezhuShuomingLineEdit->text());
+        }
+        this->dbcon->hezukehu->select();
+
+        break;
+    }
+}
+
 void MainWindow::on_deletePushButton_0_triggerd()
 {
     int fangwubianhao;
@@ -868,17 +1302,178 @@ void MainWindow::on_deletePushButton_0_triggerd()
 
     }
 }
+void MainWindow::on_deletePushButton_3_triggerd()
+{
+    int kehubianhao;
+    switch(this->stackedWidget->currentIndex())
+    {
+    case 3:
+        this->tableView_3->selectRow(this->tableView_3->currentIndex().row());
+        kehubianhao = this->tableView_3->currentIndex().data().toInt();
+        this->dbcon->deleteFromQiugouKehu(kehubianhao);
+        this->dbcon->qiugoukehu->select();
+        break;
+    case 4:
+        this->tableView_4->selectRow(this->tableView_4->currentIndex().row());
+        kehubianhao = this->tableView_4->currentIndex().data().toInt();
+        this->dbcon->deleteFromQiuzuKehu(kehubianhao);
+        this->dbcon->qiuzukehu->select();
+        break;
+    case 5:
+        this->tableView_5->selectRow(this->tableView_5->currentIndex().row());
+        kehubianhao = this->tableView_5->currentIndex().data().toInt();
+        this->dbcon->deleteFromHezuKehu(kehubianhao);
+        this->dbcon->hezukehu->select();
+        break;
+
+    }
+}
 
 void MainWindow::on_actionTianjiaKehu_triggered()
 {
     KeyuanDialog keyuanDialog(this, this->dbcon);
-    keyuanDialog.exec();
+    switches1:
+    switch(this->stackedWidget->currentIndex()){
+    case 3:
+        keyuanDialog.kehuXuqiuComboBox->setCurrentIndex(0);
+        keyuanDialog.kehuXuqiuComboBox->setEnabled(false);
+        if(keyuanDialog.exec() == QDialog::Accepted){
+            dbcon->insertQiugoukehu(keyuanDialog.kehuBianhaoSpinBox->text().toInt(),
+                                    keyuanDialog.dangqianZhuangtaiComboBox->currentText(),
+                                    keyuanDialog.zhiyeGuwenComboBox->currentText(),
+                                    keyuanDialog.kehuLaiyuanComboBox->currentText(),
+                                    keyuanDialog.suozaiChengquComboBox->currentText(),
+                                    keyuanDialog.fangwuJiageSpinBox->text().toInt(),
+                                    keyuanDialog.fangwuLeixingComboBox->currentText(),
+                                    keyuanDialog.chanquanXingbieComboBox->currentText(),
+                                    keyuanDialog.fangwuMianjiDoubleSpinBox->text().toFloat(),
+                                    keyuanDialog.xinjiuChengduComboBox->currentText(),
+                                    keyuanDialog.suozaiLoucengSpinBox->text().toInt(),
+                                    keyuanDialog.zhuangxiuBiaozhunComboBox->currentText(),
+                                    keyuanDialog.loucengZongshuSpinBox->text().toInt(),
+                                    keyuanDialog.yixiangDizhiLineEdit->text(),
+                                    keyuanDialog.chufangCheckBox->isChecked(),
+                                    keyuanDialog.chuangCheckBox->isChecked(),
+                                    keyuanDialog.jiajuCheckBox->isChecked(),
+                                    keyuanDialog.youxianDianshiCheckBox->isChecked(),
+                                    keyuanDialog.kuaidaiwangCheckBox->isChecked(),
+                                    keyuanDialog.dianhuaCheckBox->isChecked(),
+                                    keyuanDialog.reshuiqiCheckBox->isChecked(),
+                                    keyuanDialog.dianshijiCheckBox->isChecked(),
+                                    keyuanDialog.kongtiaoCheckBox->isChecked(),
+                                    keyuanDialog.xiyijiCheckBox->isChecked(),
+                                    keyuanDialog.bingxiangCheckBox->isChecked(),
+                                    keyuanDialog.meiqiCheckBox->isChecked(),
+                                    keyuanDialog.nuanqiCheckBox->isChecked(),
+                                    keyuanDialog.qichekuCheckBox->isChecked(),
+                                    keyuanDialog.fangyuanXiangxiXinxiPlainTextEdit->toPlainText(),
+                                    keyuanDialog.yezhuXingmingLineEdit->text(),
+                                    keyuanDialog.lianxiDianhuaLineEdit->text(),
+                                    keyuanDialog.lianxiShoujiLineEdit->text(),
+                                    keyuanDialog.yezhuShuomingLineEdit->text());
+        }
+        this->dbcon->qiugoukehu->select();
+
+        break;
+    case 4:
+
+        keyuanDialog.kehuXuqiuComboBox->setCurrentIndex(1);
+        keyuanDialog.kehuXuqiuComboBox->setEnabled(false);
+        if(keyuanDialog.exec() == QDialog::Accepted){
+            dbcon->insertQiuzukehu(keyuanDialog.kehuBianhaoSpinBox->text().toInt(),
+                                   keyuanDialog.dangqianZhuangtaiComboBox->currentText(),
+                                   keyuanDialog.zhiyeGuwenComboBox->currentText(),
+                                   keyuanDialog.kehuLaiyuanComboBox->currentText(),
+                                   keyuanDialog.suozaiChengquComboBox->currentText(),
+                                   keyuanDialog.fangwuJiageSpinBox->text().toInt(),
+                                   keyuanDialog.fangwuLeixingComboBox->currentText(),
+                                   keyuanDialog.chanquanXingbieComboBox->currentText(),
+                                   keyuanDialog.fangwuMianjiDoubleSpinBox->text().toFloat(),
+                                   keyuanDialog.xinjiuChengduComboBox->currentText(),
+                                   keyuanDialog.suozaiLoucengSpinBox->text().toInt(),
+                                   keyuanDialog.zhuangxiuBiaozhunComboBox->currentText(),
+                                   keyuanDialog.loucengZongshuSpinBox->text().toInt(),
+                                   keyuanDialog.yixiangDizhiLineEdit->text(),
+                                   keyuanDialog.chufangCheckBox->isChecked(),
+                                   keyuanDialog.chuangCheckBox->isChecked(),
+                                   keyuanDialog.jiajuCheckBox->isChecked(),
+                                   keyuanDialog.youxianDianshiCheckBox->isChecked(),
+                                   keyuanDialog.kuaidaiwangCheckBox->isChecked(),
+                                   keyuanDialog.dianhuaCheckBox->isChecked(),
+                                   keyuanDialog.reshuiqiCheckBox->isChecked(),
+                                   keyuanDialog.dianshijiCheckBox->isChecked(),
+                                   keyuanDialog.kongtiaoCheckBox->isChecked(),
+                                   keyuanDialog.xiyijiCheckBox->isChecked(),
+                                   keyuanDialog.bingxiangCheckBox->isChecked(),
+                                   keyuanDialog.meiqiCheckBox->isChecked(),
+                                   keyuanDialog.nuanqiCheckBox->isChecked(),
+                                   keyuanDialog.qichekuCheckBox->isChecked(),
+                                   keyuanDialog.fangyuanXiangxiXinxiPlainTextEdit->toPlainText(),
+                                   keyuanDialog.yezhuXingmingLineEdit->text(),
+                                   keyuanDialog.lianxiDianhuaLineEdit->text(),
+                                   keyuanDialog.lianxiShoujiLineEdit->text(),
+                                   keyuanDialog.yezhuShuomingLineEdit->text());
+        }
+        this->dbcon->qiuzukehu->select();
+
+
+        break;
+    case 5:
+
+        keyuanDialog.kehuXuqiuComboBox->setCurrentIndex(2);
+        keyuanDialog.kehuXuqiuComboBox->setEnabled(false);
+        keyuanDialog.asHezu();
+        if(keyuanDialog.exec() == QDialog::Accepted){
+            dbcon->insertHezukehu(keyuanDialog.kehuBianhaoSpinBox->text().toInt(),
+                                  keyuanDialog.dangqianZhuangtaiComboBox->currentText(),
+                                  keyuanDialog.zhiyeGuwenComboBox->currentText(),
+                                  keyuanDialog.kehuLaiyuanComboBox->currentText(),
+                                  keyuanDialog.suozaiChengquComboBox->currentText(),
+                                  keyuanDialog.fangwuJiageSpinBox->text().toInt(),
+                                  keyuanDialog.fangwuLeixingComboBox->currentText(),
+                                  keyuanDialog.chanquanXingbieComboBox->currentText(),
+                                  keyuanDialog.fangwuMianjiDoubleSpinBox->text().toFloat(),
+                                  keyuanDialog.xinjiuChengduComboBox->currentText(),
+                                  keyuanDialog.suozaiLoucengSpinBox->text().toInt(),
+                                  keyuanDialog.zhuangxiuBiaozhunComboBox->currentText(),
+                                  keyuanDialog.loucengZongshuSpinBox->text().toInt(),
+                                  keyuanDialog.yixiangDizhiLineEdit->text(),
+                                  keyuanDialog.chufangCheckBox->isChecked(),
+                                  keyuanDialog.chuangCheckBox->isChecked(),
+                                  keyuanDialog.jiajuCheckBox->isChecked(),
+                                  keyuanDialog.youxianDianshiCheckBox->isChecked(),
+                                  keyuanDialog.kuaidaiwangCheckBox->isChecked(),
+                                  keyuanDialog.dianhuaCheckBox->isChecked(),
+                                  keyuanDialog.reshuiqiCheckBox->isChecked(),
+                                  keyuanDialog.dianshijiCheckBox->isChecked(),
+                                  keyuanDialog.kongtiaoCheckBox->isChecked(),
+                                  keyuanDialog.xiyijiCheckBox->isChecked(),
+                                  keyuanDialog.bingxiangCheckBox->isChecked(),
+                                  keyuanDialog.meiqiCheckBox->isChecked(),
+                                  keyuanDialog.nuanqiCheckBox->isChecked(),
+                                  keyuanDialog.qichekuCheckBox->isChecked(),
+                                  keyuanDialog.fangyuanXiangxiXinxiPlainTextEdit->toPlainText(),
+                                  keyuanDialog.yezhuXingmingLineEdit->text(),
+                                  keyuanDialog.lianxiDianhuaLineEdit->text(),
+                                  keyuanDialog.lianxiShoujiLineEdit->text(),
+                                  keyuanDialog.yezhuShuomingLineEdit->text());
+        }
+        this->dbcon->hezukehu->select();
+
+
+        break;
+        default:
+        this->stackedWidget->setCurrentIndex(3);
+        goto switches1;
+        break;
+
+    }
 }
 
 void MainWindow::on_tableView_0_clicked(){//set tabWidget data;
     qDebug() << "clicked";
-    int fangwubianhao, fangwujiage, jianzhuniandai, suozailouceng, loucengzongshu;
-    QString dangqianzhuangtai, zhiyeguwen, fangwulaiyuan, suozaichengqu, fangwuleixing, chanquanxingbie,zhuangxiubiaozhun, jutidizhi, fangyuanxiangxixinxi, yezhuxingming, lianxidianghua, lianxishouji, yezhushuoming;
+    int fangwubianhao, kehubianhao, fangwujiage, jianzhuniandai, suozailouceng, loucengzongshu;
+    QString kehulaiyuan, yixiangdizhi, xinjiuchengdu, dangqianzhuangtai, zhiyeguwen, fangwulaiyuan, suozaichengqu, fangwuleixing, chanquanxingbie,zhuangxiubiaozhun, jutidizhi, fangyuanxiangxixinxi, yezhuxingming, lianxidianghua, lianxishouji, yezhushuoming;
     bool a, b, c, d, e, f, g, h, i, j, k, l, m, n;
     float fangwumianji;
     QString str;
@@ -974,6 +1569,87 @@ void MainWindow::on_tableView_0_clicked(){//set tabWidget data;
         this->beizhuLabel_2->setText(yezhushuoming);
 
         break;
+    case 3:
+        this->dbcon->getQiugouKehu(kehubianhao, &dangqianzhuangtai, &zhiyeguwen, &kehulaiyuan, &suozaichengqu,&fangwujiage, &fangwuleixing, &chanquanxingbie, &fangwumianji, & xinjiuchengdu, &suozailouceng, &zhuangxiubiaozhun, &loucengzongshu, &yixiangdizhi,
+                                   &a, &b, &c, &d, &e, &f, &g, &h, &i, &j, &k, &l, &m, &n, &fangyuanxiangxixinxi,&yezhuxingming, &lianxidianghua, &lianxishouji, & yezhushuoming);
+        this->jiageLabel_3->setText(str.setNum(fangwujiage));
+        this->mianjiLabel_3->setText(str.setNum(fangwumianji));
+        this->chufangLabel_3->setVisible(a);
+        this->chuangLabel_3->setVisible(b);
+        this->jiajuLabel_3->setVisible(c);
+        this->youxianLabel_3->setVisible(d);
+        this->kuandaiLabel_3->setVisible(e);
+        this->dianhuaLabel_3->setVisible(f);
+        this->reshuiqiLabel_3->setVisible(g);
+        this->dianshiLabel_3->setVisible(h);
+        this->kongtiaoLabel_3->setVisible(i);
+        this->xiyijiLabel_3->setVisible(j);
+        this->bingxiangLabel_3->setVisible(k);
+        this->meiqiLabel_3->setVisible(l);
+        this->nuanqiLabel_3->setVisible(m);
+        this->chekuLabel_3->setVisible(n);
+        this->dizhiLabel_3->setText(yixiangdizhi);
+
+        this->xingmingLabel_3->setText(yezhuxingming);
+        this->lianxiDianhuaLabel_3->setText(lianxidianghua);
+        this->shoujiLabel_3->setText(lianxishouji);
+        this->beizhuLabel_3->setText(yezhushuoming);
+
+        break;
+    case 4:
+        this->dbcon->getQiuzuKehu(kehubianhao, &dangqianzhuangtai, &zhiyeguwen, &kehulaiyuan, &suozaichengqu,&fangwujiage, &fangwuleixing, &chanquanxingbie, &fangwumianji, & xinjiuchengdu, &suozailouceng, &zhuangxiubiaozhun, &loucengzongshu, &yixiangdizhi,
+                                  &a, &b, &c, &d, &e, &f, &g, &h, &i, &j, &k, &l, &m, &n, &fangyuanxiangxixinxi,&yezhuxingming, &lianxidianghua, &lianxishouji, & yezhushuoming);
+        this->jiageLabel_4->setText(str.setNum(fangwujiage));
+        this->mianjiLabel_4->setText(str.setNum(fangwumianji));
+        this->chufangLabel_4->setVisible(a);
+        this->chuangLabel_4->setVisible(b);
+        this->jiajuLabel_4->setVisible(c);
+        this->youxianLabel_4->setVisible(d);
+        this->kuandaiLabel_4->setVisible(e);
+        this->dianhuaLabel_4->setVisible(f);
+        this->reshuiqiLabel_4->setVisible(g);
+        this->dianshiLabel_4->setVisible(h);
+        this->kongtiaoLabel_4->setVisible(i);
+        this->xiyijiLabel_4->setVisible(j);
+        this->bingxiangLabel_4->setVisible(k);
+        this->meiqiLabel_4->setVisible(l);
+        this->nuanqiLabel_4->setVisible(m);
+        this->chekuLabel_4->setVisible(n);
+        this->dizhiLabel_4->setText(yixiangdizhi);
+
+        this->xingmingLabel_4->setText(yezhuxingming);
+        this->lianxiDianhuaLabel_4->setText(lianxidianghua);
+        this->shoujiLabel_4->setText(lianxishouji);
+        this->beizhuLabel_4->setText(yezhushuoming);
+
+        break;
+    case 5:
+        this->dbcon->getHezuKehu(kehubianhao, &dangqianzhuangtai, &zhiyeguwen, &kehulaiyuan, &suozaichengqu,&fangwujiage, &fangwuleixing, &chanquanxingbie, &fangwumianji, & xinjiuchengdu, &suozailouceng, &zhuangxiubiaozhun, &loucengzongshu, &yixiangdizhi,
+                                 &a, &b, &c, &d, &e, &f, &g, &h, &i, &j, &k, &l, &m, &n, &fangyuanxiangxixinxi,&yezhuxingming, &lianxidianghua, &lianxishouji, & yezhushuoming);
+        this->jiageLabel_5->setText(str.setNum(fangwujiage));
+        this->mianjiLabel_5->setText(str.setNum(fangwumianji));
+        this->chufangLabel_5->setVisible(a);
+        this->chuangLabel_5->setVisible(b);
+        this->jiajuLabel_5->setVisible(c);
+        this->youxianLabel_5->setVisible(d);
+        this->kuandaiLabel_5->setVisible(e);
+        this->dianhuaLabel_5->setVisible(f);
+        this->reshuiqiLabel_5->setVisible(g);
+        this->dianshiLabel_5->setVisible(h);
+        this->kongtiaoLabel_5->setVisible(i);
+        this->xiyijiLabel_5->setVisible(j);
+        this->bingxiangLabel_5->setVisible(k);
+        this->meiqiLabel_5->setVisible(l);
+        this->nuanqiLabel_5->setVisible(m);
+        this->chekuLabel_5->setVisible(n);
+        this->dizhiLabel_5->setText(yixiangdizhi);
+
+        this->xingmingLabel_5->setText(yezhuxingming);
+        this->lianxiDianhuaLabel_5->setText(lianxidianghua);
+        this->shoujiLabel_5->setText(lianxishouji);
+        this->beizhuLabel_5->setText(yezhushuoming);
+
+        break;
 
     }
 }
@@ -984,6 +1660,18 @@ void MainWindow::on_tableView_1_clicked()
 }
 
 void MainWindow::on_tableView_2_clicked()
+{
+    on_tableView_0_clicked();
+}
+void MainWindow::on_tableView_3_clicked()
+{
+    on_tableView_0_clicked();
+}
+void MainWindow::on_tableView_4_clicked()
+{
+    on_tableView_0_clicked();
+}
+void MainWindow::on_tableView_5_clicked()
 {
     on_tableView_0_clicked();
 }
@@ -1034,14 +1722,44 @@ void MainWindow::on_chengquComboBox_2_currentIndexChanged(const QString &text)
 void MainWindow::on_chengquComboBox_3_currentIndexChanged(const QString &text)
 {
     qDebug() << text;
+    if(text == tr("不限")){
+        this->filterChengqu_3->clear();
+        this->filterChengqu_3->append(tr(" 1 "));
+    }else
+    {
+        this->filterChengqu_3->clear();
+        this->filterChengqu_3->append(tr(" suozaichengqu = '")).append(text).append(" ' ");
+    }
+    this->dbcon->qiugoukehu->setFilter (*(this->filterChengqu_3) + tr("and") + *(this->filterLeixing_3) +tr("and") +*(this->filterZhuangtai_3));
+    this->dbcon->qiugoukehu->select();
 }
 void MainWindow::on_chengquComboBox_4_currentIndexChanged(const QString &text)
 {
     qDebug() << text;
+    if(text == tr("不限")){
+        this->filterChengqu_4->clear();
+        this->filterChengqu_4->append(tr(" 1 "));
+    }else
+    {
+        this->filterChengqu_4->clear();
+        this->filterChengqu_4->append(tr(" suozaichengqu = '")).append(text).append(" ' ");
+    }
+    this->dbcon->qiuzukehu->setFilter (*(this->filterChengqu_4) + tr("and") + *(this->filterLeixing_4) +tr("and") +*(this->filterZhuangtai_4));
+    this->dbcon->qiuzukehu->select();
 }
 void MainWindow::on_chengquComboBox_5_currentIndexChanged(const QString &text)
 {
     qDebug() << text;
+    if(text == tr("不限")){
+        this->filterChengqu_5->clear();
+        this->filterChengqu_5->append(tr(" 1 "));
+    }else
+    {
+        this->filterChengqu_5->clear();
+        this->filterChengqu_5->append(tr(" suozaichengqu = '")).append(text).append(" ' ");
+    }
+    this->dbcon->hezukehu->setFilter (*(this->filterChengqu_5) + tr("and") + *(this->filterLeixing_5) +tr("and") +*(this->filterZhuangtai_5));
+    this->dbcon->hezukehu->select();
 }
 
 void MainWindow::on_fangwuLeixingComboBox_0_currentIndexChanged(const QString &text)
@@ -1094,14 +1812,47 @@ void MainWindow::on_fangwuLeixingComboBox_2_currentIndexChanged(const QString &t
 void MainWindow::on_fangwuLeixingComboBox_3_currentIndexChanged(const QString &text)
 {
     qDebug() << text;
+    if(text == tr("不限")){
+        this->filterLeixing_3->clear();
+        this->filterLeixing_3->append(tr(" 1 "));
+    }else
+    {
+        this->filterLeixing_3->clear();
+        this->filterLeixing_3->append(tr(" fangwuleixing = '")).append(text).append(" ' ");
+    }
+
+    this->dbcon->qiugoukehu->setFilter (*(this->filterChengqu_3) + tr("and") + *(this->filterLeixing_3) +tr("and") +*(this->filterZhuangtai_3));
+    this->dbcon->qiugoukehu->select();
 }
 void MainWindow::on_fangwuLeixingComboBox_4_currentIndexChanged(const QString &text)
 {
     qDebug() << text;
+    if(text == tr("不限")){
+        this->filterLeixing_4->clear();
+        this->filterLeixing_4->append(tr(" 1 "));
+    }else
+    {
+        this->filterLeixing_4->clear();
+        this->filterLeixing_4->append(tr(" fangwuleixing = '")).append(text).append(" ' ");
+    }
+
+    this->dbcon->qiuzukehu->setFilter (*(this->filterChengqu_4) + tr("and") + *(this->filterLeixing_4) +tr("and") +*(this->filterZhuangtai_4));
+    this->dbcon->qiuzukehu->select();
 }
 void MainWindow::on_fangwuLeixingComboBox_5_currentIndexChanged(const QString &text)
 {
     qDebug() << text;
+    if(text == tr("不限")){
+        this->filterLeixing_5->clear();
+        this->filterLeixing_5->append(tr(" 1 "));
+    }else
+    {
+        this->filterLeixing_5->clear();
+        this->filterLeixing_5->append(tr(" fangwuleixing = '")).append(text).append(" ' ");
+    }
+
+    this->dbcon->hezukehu->setFilter (*(this->filterChengqu_5) + tr("and") + *(this->filterLeixing_5) +tr("and") +*(this->filterZhuangtai_5));
+    this->dbcon->hezukehu->select();
 }
 
 void MainWindow::on_fangwuZhuangtaiComboBox_0_currentIndexChanged(const QString &text){
@@ -1149,10 +1900,43 @@ void MainWindow::on_fangwuZhuangtaiComboBox_2_currentIndexChanged(const QString 
 
 void MainWindow::on_kehuZhuangtaiComboBox_3_currentIndexChanged(const QString &text){
     qDebug() << text;
+    if(text == tr("不限")){
+        this->filterZhuangtai_3->clear();
+        this->filterZhuangtai_3->append(tr(" 1 "));
+    }else
+    {
+        this->filterZhuangtai_3->clear();
+        this->filterZhuangtai_3->append(tr(" dangqianzhuangtai = '")).append(text).append(" ' ");
+    }
+
+    this->dbcon->qiugoukehu->setFilter (*(this->filterChengqu_3) + tr("and") + *(this->filterLeixing_3) +tr("and") +*(this->filterZhuangtai_3));
+    this->dbcon->qiugoukehu->select();
 }
 void MainWindow::on_kehuZhuangtaiComboBox_4_currentIndexChanged(const QString &text){
     qDebug() << text;
+    if(text == tr("不限")){
+        this->filterZhuangtai_4->clear();
+        this->filterZhuangtai_4->append(tr(" 1 "));
+    }else
+    {
+        this->filterZhuangtai_4->clear();
+        this->filterZhuangtai_4->append(tr(" dangqianzhuangtai = '")).append(text).append(" ' ");
+    }
+
+    this->dbcon->qiuzukehu->setFilter (*(this->filterChengqu_4) + tr("and") + *(this->filterLeixing_4) +tr("and") +*(this->filterZhuangtai_4));
+    this->dbcon->qiuzukehu->select();
 }
 void MainWindow::on_kehuZhuangtaiComboBox_5_currentIndexChanged(const QString &text){
     qDebug() << text;
+    if(text == tr("不限")){
+        this->filterZhuangtai_5->clear();
+        this->filterZhuangtai_5->append(tr(" 1 "));
+    }else
+    {
+        this->filterZhuangtai_5->clear();
+        this->filterZhuangtai_5->append(tr(" dangqianzhuangtai = '")).append(text).append(" ' ");
+    }
+
+    this->dbcon->hezukehu->setFilter (*(this->filterChengqu_5) + tr("and") + *(this->filterLeixing_5) +tr("and") +*(this->filterZhuangtai_5));
+    this->dbcon->hezukehu->select();
 }

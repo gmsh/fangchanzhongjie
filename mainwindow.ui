@@ -2200,7 +2200,7 @@
             <item row="3" column="0">
              <widget class="QLabel" name="label_82">
               <property name="text">
-               <string>具体地址:</string>
+               <string>意向地址:</string>
               </property>
              </widget>
             </item>
@@ -2770,7 +2770,7 @@
             <item row="3" column="0">
              <widget class="QLabel" name="label_83">
               <property name="text">
-               <string>具体地址:</string>
+               <string>意向地址:</string>
               </property>
              </widget>
             </item>
@@ -3340,7 +3340,7 @@
             <item row="3" column="0">
              <widget class="QLabel" name="label_84">
               <property name="text">
-               <string>具体地址:</string>
+               <string>意向地址:</string>
               </property>
              </widget>
             </item>

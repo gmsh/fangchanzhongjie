@@ -47,14 +47,19 @@ private slots:
     void on_actionCanshuShezhi_triggerd();
     void on_actionTianjiaFangyuan_triggered();
     void on_actionTianjiaKehu_triggered();
-    void on_modifyPushButton_0_triggerd();
+    void on_modifyPushButton_0_triggerd();//typos but no fix
+    void on_modifyPushButton_3_triggerd();
     void on_deletePushButton_0_triggerd();
+    void on_deletePushButton_3_triggerd();
     void on_taskTreeWidget_itemActivated ( QTreeWidgetItem * item, int column );
     void on_stackedWidget_currentChanged ( int index );
 
     void on_tableView_0_clicked();
     void on_tableView_1_clicked();
     void on_tableView_2_clicked();
+    void on_tableView_3_clicked();
+    void on_tableView_4_clicked();
+    void on_tableView_5_clicked();
 
     void on_chengquComboBox_0_currentIndexChanged ( const QString & text ) ;
     void on_chengquComboBox_1_currentIndexChanged ( const QString & text ) ;
