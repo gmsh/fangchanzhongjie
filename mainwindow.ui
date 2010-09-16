@@ -3738,10 +3738,10 @@
    <addaction name="actionTianjiaKehu"/>
    <addaction name="separator"/>
    <addaction name="actionQianyueChengjiao"/>
-   <addaction name="actionGenjinChaxun"/>
+   <addaction name="actionQuanxianzuGuanli"/>
    <addaction name="separator"/>
-   <addaction name="actionQiehuanDenglu"/>
-   <addaction name="actionXitongShezhi"/>
+   <addaction name="actionYuangongGuanli"/>
+   <addaction name="actionCanshuShezhi"/>
    <addaction name="separator"/>
    <addaction name="actionRuanjianBangzhu"/>
    <addaction name="actionTuichuXitong"/>
@@ -3791,46 +3791,46 @@
     <string>签约成交</string>
    </property>
   </action>
-  <action name="actionGenjinChaxun">
+  <action name="actionQuanxianzuGuanli">
    <property name="icon">
     <iconset resource="main.qrc">
-     <normaloff>:/images/genjinchaxun.png</normaloff>:/images/genjinchaxun.png</iconset>
+     <normaloff>:/images/quanxian.png</normaloff>:/images/quanxian.png</iconset>
    </property>
    <property name="text">
-    <string>跟进查询</string>
+    <string>权限组管理</string>
    </property>
    <property name="toolTip">
-    <string>签约成交</string>
+    <string>权限组管理</string>
    </property>
    <property name="statusTip">
     <string>跟进查询</string>
    </property>
   </action>
-  <action name="actionQiehuanDenglu">
+  <action name="actionYuangongGuanli">
    <property name="icon">
     <iconset resource="main.qrc">
      <normaloff>:/images/qiehuandenglu.png</normaloff>:/images/qiehuandenglu.png</iconset>
    </property>
    <property name="text">
-    <string>切换登录</string>
+    <string>员工管理</string>
    </property>
    <property name="toolTip">
-    <string>签约成交</string>
+    <string>员工管理</string>
    </property>
    <property name="statusTip">
     <string>切换登录</string>
    </property>
   </action>
-  <action name="actionXitongShezhi">
+  <action name="actionCanshuShezhi">
    <property name="icon">
     <iconset resource="main.qrc">
      <normaloff>:/images/xitongshezhi.png</normaloff>:/images/xitongshezhi.png</iconset>
    </property>
    <property name="text">
-    <string>系统设置</string>
+    <string>参数设置</string>
    </property>
    <property name="toolTip">
-    <string>系统设置</string>
+    <string>参数设置</string>
    </property>
    <property name="statusTip">
     <string>系统设置</string>

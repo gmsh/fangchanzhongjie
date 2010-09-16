@@ -15,11 +15,6 @@ public:
     ~MainWindow();
 private:
     DBConnect *dbcon;
-    QMenu * xitongShezhiMenu;
-    QAction * actionYuangongGuanli;
-    QAction * actionQuanxianzuGuanli;
-    QAction * actionCanshuShezhi;
-    QIcon * quanxianzuIcon;
     QString * filterChengqu_0;
     QString * filterLeixing_0;
     QString * filterZhuangtai_0;
@@ -39,18 +34,17 @@ private:
     QString * filterLeixing_5;
     QString * filterZhuangtai_5;
 private slots:
-    void on_actionXitongShezhi_triggered();
     void on_actionRuanjianBangzhu_triggered();
     void on_actionTuichuXitong_triggered();
-    void on_actionYuangongGuanli_triggerd();
+    void on_actionYuangongGuanli_triggered();
     void on_actionQuanxianzuGuanli_triggered();
-    void on_actionCanshuShezhi_triggerd();
+    void on_actionCanshuShezhi_triggered();
     void on_actionTianjiaFangyuan_triggered();
     void on_actionTianjiaKehu_triggered();
-    void on_modifyPushButton_0_triggerd();//typos but no fix
-    void on_modifyPushButton_3_triggerd();
-    void on_deletePushButton_0_triggerd();
-    void on_deletePushButton_3_triggerd();
+    void on_modifyPushButton_0_clicked();
+    void on_modifyPushButton_3_clicked();
+    void on_deletePushButton_0_clicked();
+    void on_deletePushButton_3_clicked();
     void on_taskTreeWidget_itemActivated ( QTreeWidgetItem * item, int column );
     void on_stackedWidget_currentChanged ( int index );
 

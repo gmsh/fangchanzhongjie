@@ -36,8 +36,6 @@ MainWindow::MainWindow(DBConnect *dbcon)
     this->filterLeixing_5 = new QString;
     this->filterZhuangtai_5 = new QString;
 
-    this->xitongShezhiMenu = new QMenu;
-
     this->fangwuLeixingComboBox_0->addItem((tr("不限")));
     this->fangwuLeixingComboBox_0->addItem(tr("1室"));
     this->fangwuLeixingComboBox_0->addItem(tr("1室1厅"));
@@ -202,14 +200,6 @@ MainWindow::MainWindow(DBConnect *dbcon)
     this->fcomboBox_4->addItems(*(this->dbcon->genjinFangshiList()));
     this->fcomboBox_5->addItems(*(this->dbcon->genjinFangshiList()));
 
-    this->quanxianzuIcon = new QIcon(":/images/quanxian.png");
-    this->actionYuangongGuanli = new QAction(this->actionQiehuanDenglu->icon(),tr("员工管理"), this);
-    this->actionQuanxianzuGuanli = new QAction(*(this->quanxianzuIcon), tr("权限组管理"), this);
-    this->actionCanshuShezhi = new QAction(this->actionXitongShezhi->icon(), tr("参数设置"), this);
-    this->xitongShezhiMenu->addAction(this->actionYuangongGuanli);
-    this->xitongShezhiMenu->addAction(this->actionQuanxianzuGuanli);
-    this->xitongShezhiMenu->addAction(this->actionCanshuShezhi);
-    this->actionXitongShezhi->setMenu(this->xitongShezhiMenu);
 
     this->tableView_0->setModel(dbcon->chushoufangyuan);
     this->tableView_1->setModel(dbcon->chuzufangyuan);
@@ -416,52 +406,34 @@ MainWindow::MainWindow(DBConnect *dbcon)
 
 
 
-    connect(this->actionYuangongGuanli, SIGNAL(triggered()), this, SLOT(on_actionYuangongGuanli_triggerd()));
-    connect(this->actionQuanxianzuGuanli, SIGNAL(triggered()), this, SLOT(on_actionQuanxianzuGuanli_triggered()));
-    connect(this->actionCanshuShezhi, SIGNAL(triggered()), this, SLOT(on_actionCanshuShezhi_triggerd()));
-
     connect(this->addPushButton_0, SIGNAL(clicked()), this, SLOT(on_actionTianjiaFangyuan_triggered()));
     connect(this->addPushButton_1, SIGNAL(clicked()), this, SLOT(on_actionTianjiaFangyuan_triggered()));
     connect(this->addPushButton_2, SIGNAL(clicked()), this, SLOT(on_actionTianjiaFangyuan_triggered()));
 
-    connect(this->modifyPushButton_0, SIGNAL(clicked()), this, SLOT(on_modifyPushButton_0_triggerd()));
-    connect(this->modifyPushButton_1, SIGNAL(clicked()), this, SLOT(on_modifyPushButton_0_triggerd()));
-    connect(this->modifyPushButton_2, SIGNAL(clicked()), this, SLOT(on_modifyPushButton_0_triggerd()));
+    connect(this->modifyPushButton_1, SIGNAL(clicked()), this, SLOT(on_modifyPushButton_0_clicked()));
+    connect(this->modifyPushButton_2, SIGNAL(clicked()), this, SLOT(on_modifyPushButton_0_clicked()));
 
-    connect(this->modifyPushButton_3, SIGNAL(clicked()), this, SLOT(on_modifyPushButton_3_triggerd()));
-    connect(this->modifyPushButton_4, SIGNAL(clicked()), this, SLOT(on_modifyPushButton_3_triggerd()));
-    connect(this->modifyPushButton_5, SIGNAL(clicked()), this, SLOT(on_modifyPushButton_3_triggerd()));
+    connect(this->modifyPushButton_4, SIGNAL(clicked()), this, SLOT(on_modifyPushButton_3_clicked()));
+    connect(this->modifyPushButton_5, SIGNAL(clicked()), this, SLOT(on_modifyPushButton_3_clicked()));
 
-    connect(this->deletePushButton_0, SIGNAL(clicked()), this,  SLOT(on_deletePushButton_0_triggerd()));
-    connect(this->deletePushButton_1, SIGNAL(clicked()), this,  SLOT(on_deletePushButton_0_triggerd()));
-    connect(this->deletePushButton_2, SIGNAL(clicked()), this,  SLOT(on_deletePushButton_0_triggerd()));
+    connect(this->deletePushButton_1, SIGNAL(clicked()), this,  SLOT(on_deletePushButton_0_clicked()));
+    connect(this->deletePushButton_2, SIGNAL(clicked()), this,  SLOT(on_deletePushButton_0_clicked()));
 
-    connect(this->deletePushButton_3, SIGNAL(clicked()), this,  SLOT(on_deletePushButton_3_triggerd()));
-    connect(this->deletePushButton_4, SIGNAL(clicked()), this,  SLOT(on_deletePushButton_3_triggerd()));
-    connect(this->deletePushButton_5, SIGNAL(clicked()), this,  SLOT(on_deletePushButton_3_triggerd()));
+    connect(this->deletePushButton_4, SIGNAL(clicked()), this,  SLOT(on_deletePushButton_3_clicked()));
+    connect(this->deletePushButton_5, SIGNAL(clicked()), this,  SLOT(on_deletePushButton_3_clicked()));
 
     connect(this->addPushButton_3, SIGNAL(clicked()), this, SLOT(on_actionTianjiaKehu_triggered()));
     connect(this->addPushButton_4, SIGNAL(clicked()), this, SLOT(on_actionTianjiaKehu_triggered()));
     connect(this->addPushButton_5, SIGNAL(clicked()), this, SLOT(on_actionTianjiaKehu_triggered()));
-    //
-    //    connect(this->tableView_1, SIGNAL(clicked(QModelIndex)), this, SLOT(on_tableView_0_clicked()));
-    //    connect(this->tableView_1, SIGNAL(clicked(QModelIndex)), this, SLOT(on_tableView_0_clicked()));
 
     this->tableView_0->selectRow(0);
     this->tableView_1->selectRow(0);
     this->tableView_2->selectRow(0);
     this->on_tableView_0_clicked();
-    //this->tableView_0->
 }
 
 MainWindow::~MainWindow()
 {
-    free(this->xitongShezhiMenu);
-}
-
-void MainWindow::on_actionXitongShezhi_triggered()
-{
-    this->xitongShezhiMenu->popup(QCursor::pos());
 }
 
 void MainWindow::on_actionRuanjianBangzhu_triggered()
@@ -474,7 +446,7 @@ void MainWindow::on_actionTuichuXitong_triggered()
     qApp->quit();
 }
 
-void MainWindow::on_actionYuangongGuanli_triggerd()
+void MainWindow::on_actionYuangongGuanli_triggered()
 {
     YuangongGuanliDialog yuangongGuanliDialog(this, this->dbcon);
     yuangongGuanliDialog.exec();
@@ -486,7 +458,7 @@ void MainWindow::on_actionQuanxianzuGuanli_triggered()
     quanxianzuGuanliDialog.exec();
 }
 
-void MainWindow::on_actionCanshuShezhi_triggerd()
+void MainWindow::on_actionCanshuShezhi_triggered()
 {
     CanshuGuanliDialog canshuGuanliDialog(0, this->dbcon);
     canshuGuanliDialog.exec();
@@ -653,7 +625,7 @@ void MainWindow::on_actionTianjiaFangyuan_triggered()
 
 }
 
-void MainWindow::on_modifyPushButton_0_triggerd()
+void MainWindow::on_modifyPushButton_0_clicked()
 {
     qDebug() << "modify";
 
@@ -985,7 +957,7 @@ void MainWindow::on_modifyPushButton_0_triggerd()
     }
 }
 
-void MainWindow::on_modifyPushButton_3_triggerd()
+void MainWindow::on_modifyPushButton_3_clicked()
 {
     int kehubianhao, fangwujiage, suozailouceng, loucengzongshu;
     QString xinjiuchengdu, dangqianzhuangtai, zhiyeguwen, kehulaiyuan, suozaichengqu, fangwuleixing, chanquanxingbie,zhuangxiubiaozhun, yixiangdizhi, fangyuanxiangxixinxi, yezhuxingming, lianxidianghua, lianxishouji, yezhushuoming;
@@ -1315,7 +1287,7 @@ void MainWindow::on_modifyPushButton_3_triggerd()
     }
 }
 
-void MainWindow::on_deletePushButton_0_triggerd()
+void MainWindow::on_deletePushButton_0_clicked()
 {
     int fangwubianhao;
     switch(this->stackedWidget->currentIndex())
@@ -1343,7 +1315,7 @@ void MainWindow::on_deletePushButton_0_triggerd()
 
     }
 }
-void MainWindow::on_deletePushButton_3_triggerd()
+void MainWindow::on_deletePushButton_3_clicked()
 {
     int kehubianhao;
     switch(this->stackedWidget->currentIndex())
