@@ -82,6 +82,8 @@ private slots:
     void on_kehuZhuangtaiComboBox_3_currentIndexChanged ( const QString & text ) ;
     void on_kehuZhuangtaiComboBox_4_currentIndexChanged ( const QString & text ) ;
     void on_kehuZhuangtaiComboBox_5_currentIndexChanged ( const QString & text ) ;
+
+    void on_actionQianyueChengjiao_triggered();
 };
 
 #endif // MAINWINDOW_H

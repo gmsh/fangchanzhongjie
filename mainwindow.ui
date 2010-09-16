@@ -3629,7 +3629,7 @@
    <addaction name="actionTianjiaFangyuan"/>
    <addaction name="actionTianjiaKehu"/>
    <addaction name="separator"/>
-   <addaction name="actionQianyueChengJiao"/>
+   <addaction name="actionQianyueChengjiao"/>
    <addaction name="actionGenjinChaxun"/>
    <addaction name="separator"/>
    <addaction name="actionQiehuanDenglu"/>
@@ -3668,7 +3668,7 @@
     <string>添加客源</string>
    </property>
   </action>
-  <action name="actionQianyueChengJiao">
+  <action name="actionQianyueChengjiao">
    <property name="icon">
     <iconset resource="main.qrc">
      <normaloff>:/images/qianyuechengjiao.png</normaloff>:/images/qianyuechengjiao.png</iconset>

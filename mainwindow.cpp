@@ -5,6 +5,7 @@
 #include "fangyuandialog.h"
 #include "keyuandialog.h"
 #include "dbconnect.h"
+//#include "qianyuedialog.h"
 #include <QtGui/QMenu>
 #include <QtGui/QAction>
 #include <QtGui/QMessageBox>
@@ -1939,4 +1940,10 @@ void MainWindow::on_kehuZhuangtaiComboBox_5_currentIndexChanged(const QString &t
 
     this->dbcon->hezukehu->setFilter (*(this->filterChengqu_5) + tr("and") + *(this->filterLeixing_5) +tr("and") +*(this->filterZhuangtai_5));
     this->dbcon->hezukehu->select();
+}
+
+void MainWindow::on_actionQianyueChengjiao_triggered()
+{
+    //QianyueDialog qianyue(this, this->dbcon);
+    //qianyue.exec();
 }

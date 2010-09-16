@@ -149,6 +149,15 @@ DBConnect::DBConnect()
 
     this->hezukehu->select();
 
+    this->qianyue = new QSqlTableModel(this);
+    this->qianyue->setTable("qianyue");
+    this->qianyue->setHeaderData(0, Qt::Horizontal, tr("房源"));
+    this->qianyue->setHeaderData(1, Qt::Horizontal, tr("客户"));
+    this->qianyue->setHeaderData(2, Qt::Horizontal, tr("员工"));
+    this->qianyue->setHeaderData(3, Qt::Horizontal, tr("佣金"));
+    this->qianyue->setHeaderData(4, Qt::Horizontal, tr("提成方式"));
+    this->qianyue->setHeaderData(5, Qt::Horizontal, tr("编号"));
+    this->qianyue->select();
 }
 
 DBConnect::~DBConnect()
@@ -201,6 +210,56 @@ QStringList * DBConnect::quanxianzuList()
     }
     return list;
 }
+
+QStringList * DBConnect::fenchenFangshiList()
+{
+    QSqlQuery query;
+    query.exec("select mingcheng from canshu_fenchengshuoming");
+    QStringList * list = new QStringList;
+    while(query.next()){
+        *list << query.value(0).toString();
+    }
+    return list;
+}
+
+QStringList * DBConnect::fangyuanList()
+{
+    QStringList * list = new QStringList;
+    QSqlQuery query;
+    query.exec("select yezhuxingming from chushoufangyuan");
+    while(query.next()){
+        *list << query.value(0).toString();
+    }
+    query.exec("select yezhuxingming from chuzufangyuan");
+    while(query.next()){
+        *list << query.value(0).toString();
+    }
+    query.exec("select yezhuxingming from hezufangyuan");
+    while(query.next()){
+        *list << query.value(0).toString();
+    }
+    return list;
+}
+
+QStringList * DBConnect::keyuanList()
+{
+    QStringList * list = new QStringList;
+    QSqlQuery query;
+    query.exec("select yezhuxingming from qiugoukehu");
+    while(query.next()){
+        *list << query.value(0).toString();
+    }
+    query.exec("select yezhuxingming from qiuzukehu");
+    while(query.next()){
+        *list << query.value(0).toString();
+    }
+    query.exec("select yezhuxingming from hezukehu");
+    while(query.next()){
+        *list << query.value(0).toString();
+    }
+    return list;
+}
+
 
 bool DBConnect::insertIntoQuanxianZu(QString *mingcheng, bool a, bool b, bool c, bool d, bool e, bool f, bool g, bool h, bool i, bool j, bool k, bool l)
 {

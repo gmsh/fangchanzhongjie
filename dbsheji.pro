@@ -9,7 +9,8 @@ SOURCES += main.cpp \
     combodelegate.cpp \
     mainwindow.cpp \
     fangyuandialog.cpp \
-    keyuandialog.cpp
+    keyuandialog.cpp \
+    chengjiaoqianyuedialog.cpp
 QT += sql
 RESOURCES += main.qrc
 OTHER_FILES += welcome.png \
@@ -38,7 +39,8 @@ FORMS += logindialog.ui \
     quanxianzushezhidialog.ui \
     quanxianzuguanlidialog.ui \
     yuangongguanlidialog.ui \
-    yuangongxinxidialog.ui
+    yuangongxinxidialog.ui \
+    qianyuechengjiaodialog.ui
 HEADERS += logindialog.h \
     dbconnect.h \
     yuangongguanlidialog.h \
@@ -49,4 +51,5 @@ HEADERS += logindialog.h \
     combodelegate.h \
     mainwindow.h \
     fangyuandialog.h \
-    keyuandialog.h
+    keyuandialog.h \
+    chengjiaoqianyuedialog.h
