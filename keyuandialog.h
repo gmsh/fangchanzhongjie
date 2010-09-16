@@ -12,12 +12,13 @@ class KeyuanDialog
 public:
     KeyuanDialog(QWidget * parent, DBConnect * dbcon);
     ~KeyuanDialog();
+
+    void asQiugouQiuzu();
+    void asHezu();
 private slots:
     void on_kehuXuqiuComboBox_currentIndexChanged ( const QString & text );
 private:
     DBConnect * dbcon;
-    void asQiugouQiuzu();
-    void asHezu();
 };
 
 #endif // KEYUANDIALOG_H

@@ -18,7 +18,6 @@ void YuangongGuanliDialog::setTableModel(QSqlTableModel *tableModel)
 {
     this->tableModel = tableModel;
     this->tableView->setModel(this->tableModel);
-    this->tableView->resizeColumnsToContents();
 
     QStringList * xingbieList = new QStringList;
     *xingbieList << tr("男") << tr("女");
@@ -42,6 +41,8 @@ void YuangongGuanliDialog::setTableModel(QSqlTableModel *tableModel)
     this->tableView->setItemDelegateForColumn(7, this->dateDelegate);
     this->tableView->setItemDelegateForColumn(9,this->dateDelegate);
     this->tableView->selectRow(0);
+
+    this->tableView->resizeColumnsToContents();
 
 }
 void YuangongGuanliDialog::on_addPushButton_clicked()

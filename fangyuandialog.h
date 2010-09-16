@@ -12,12 +12,13 @@ class FangyuanDialog
 public:
     FangyuanDialog(QWidget * parent = 0, DBConnect * dbcon = 0);
     ~FangyuanDialog();
+
+    void asChushouChuzu();
+    void asHezu();
 private slots:
     void on_fangwuLeixingComboBox_currentIndexChanged ( const QString & text );
 private:
     DBConnect * dbcon;
-    void asChushouChuzu();
-    void asHezu();
 };
 
 #endif // FANGYUANDIALOG_H
