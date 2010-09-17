@@ -17,26 +17,8 @@ MainWindow::MainWindow(DBConnect *dbcon, QString *loginName)
     this->dbcon = dbcon;
     setupUi(this);
     bool a, b, c, d, e, f, g, h, i, j, k, l;
-    //QString * suozaiquanxianzu = this->dbcon->getSuozaiQuanxianzu(loginName);
-    /*this->dbcon->getQuanxian(suozaiquanxianzu, &a, &b, &c, &d, &e, &f, &g, &h, &i, &j, &k, &l);
-    this->stackedWidget->widget(0)->setEnabled(a);
-    this->stackedWidget->widget(1)->setEnabled(b);
-    this->stackedWidget->widget(2)->setEnabled(c);
-    this->stackedWidget->widget(3)->setEnabled(d);
-    this->stackedWidget->widget(4)->setEnabled(e);
-    this->stackedWidget->widget(5)->setEnabled(f);
-
-    this->tabWidget_0->widget(3)->setEnabled(g);
-    this->tabWidget_1->widget(3)->setEnabled(g);
-    this->tabWidget_2->widget(3)->setEnabled(g);
-    this->tabWidget_3->widget(3)->setEnabled(h);
-    this->tabWidget_4->widget(3)->setEnabled(h);
-    this->tabWidget_5->widget(3)->setEnabled(h);
-
-    this->actionQianyueChengjiao->setEnabled(i);
-    this->actionYuangongGuanli->setEnabled(j);
-    this->actionQuanxianzuGuanli->setEnabled(k);
-    this->actionCanshuShezhi->setEnabled(l);*/
+    QString * suozaiquanxianzu = this->dbcon->getSuozaiQuanxianzu(loginName);
+    this->dbcon->getQuanxian(suozaiquanxianzu, &a, &b, &c, &d, &e, &f, &g, &h, &i, &j, &k, &l);
 
     this->filterChengqu_0 = new QString;
     this->filterLeixing_0 = new QString;
@@ -451,6 +433,28 @@ MainWindow::MainWindow(DBConnect *dbcon, QString *loginName)
     this->tableView_1->selectRow(0);
     this->tableView_2->selectRow(0);
     this->on_tableView_0_clicked();
+    this->stackedWidget->widget(0)->setEnabled(a);
+    this->stackedWidget->widget(1)->setEnabled(b);
+    this->stackedWidget->widget(2)->setEnabled(c);
+    this->stackedWidget->widget(3)->setEnabled(d);
+    this->stackedWidget->widget(4)->setEnabled(e);
+    this->stackedWidget->widget(5)->setEnabled(f);
+
+    this->tabWidget_0->widget(2)->setEnabled(g);
+    this->tabWidget_1->widget(2)->setEnabled(g);
+    this->tabWidget_2->widget(2)->setEnabled(g);
+    this->tabWidget_3->widget(2)->setEnabled(h);
+    this->tabWidget_4->widget(2)->setEnabled(h);
+    this->tabWidget_5->widget(2)->setEnabled(h);
+
+    this->actionTianjiaFangyuan->setEnabled(a&b&c);
+    this->actionTianjiaKehu->setEnabled(d&e&f);
+    this->actionQianyueChengjiao->setEnabled(i);
+    this->actionYuangongGuanli->setEnabled(j);
+    this->actionQuanxianzuGuanli->setEnabled(k);
+    this->actionCanshuShezhi->setEnabled(l);
+
+
 }
 
 MainWindow::~MainWindow()

@@ -13,6 +13,7 @@ LoginDialog::LoginDialog(QWidget *parent, QStringList * list)
     buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
     connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
     connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    this->logginSuccess = false;
 }
 void LoginDialog::on_passwdLineEdit_textChanged()
 {
@@ -30,5 +31,6 @@ void LoginDialog::loginFailed()
 }
 
 void LoginDialog::loginSuccessed(){
+    this->logginSuccess = true;
     emit QDialog::accept();
 }

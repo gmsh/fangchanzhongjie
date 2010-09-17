@@ -9,6 +9,7 @@ class LoginDialog : public QDialog, public Ui::LoginDialog
     Q_OBJECT
 public:
     LoginDialog(QWidget *parent = 0, QStringList * list = 0);
+    bool logginSuccess;
 signals:
     void loggined(const QString & loginName, const QString & passwd);
 private slots:
